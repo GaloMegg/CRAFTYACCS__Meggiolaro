@@ -1,0 +1,12 @@
+@use "../variables" as v;
+
+.navFlex {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 60%;
+  .links {
+    color: v.$darkerBlack;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.8rem;
+  }
+}
