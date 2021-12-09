@@ -34,21 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "Ecommerce made in CODERHOUSE React-js course",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GaloMegg/React-js__CRAFTYACCS.git"
-  },
-  "keywords": [
-    "ecommerce"
-  ],
-  "author": "Galo Meggiolaro",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GaloMegg/React-js__CRAFTYACCS/issues"
-  },
-  "homepage": "https://github.com/GaloMegg/React-js__CRAFTYACCS#readme"
+  }
 }
