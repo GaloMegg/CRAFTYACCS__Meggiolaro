@@ -1,6 +1,6 @@
-import Header from "./nav/Header";
-import Nav from "./nav/Nav";
-import Landing from "./landing/Landing";
+import Header from "./components/nav/Header";
+import Nav from "./components/nav/Nav";
+import Landing from "./components/landing/Landing";
 
 
 function MainApp() {

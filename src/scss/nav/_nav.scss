@@ -8,5 +8,8 @@
     color: v.$darkerBlack;
     font-family: "Oswald", sans-serif;
     font-size: 0.8rem;
+    &:hover{
+      color: white;
+    }
   }
 }
