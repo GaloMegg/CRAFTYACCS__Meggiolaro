@@ -1,5 +1,4 @@
 import Links from "../Links"
-
 const Nav = () => {
     return (
         <nav className="navFlex">
@@ -7,5 +6,4 @@ const Nav = () => {
         </nav>
     )
 }
-
 export default Nav

@@ -1,6 +1,5 @@
 import Links from "../Links"
 import Socialmedia from "./Socialmedia"
-
 const Footer = () => {
     return (
         <footer className="footer__footerFlex">
@@ -13,5 +12,4 @@ const Footer = () => {
         </footer>
     )
 }
-
 export default Footer

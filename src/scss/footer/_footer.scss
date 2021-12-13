@@ -1,3 +1,5 @@
+@use "../variables" as v;
+
 .footer__footerFlex {
   height: 25vh;
   max-width: 100%;
@@ -13,6 +15,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    .links {
+      color: v.$darkerBlack;
+      font-family: "Oswald", sans-serif;
+      font-size: 0.8rem;
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
 
