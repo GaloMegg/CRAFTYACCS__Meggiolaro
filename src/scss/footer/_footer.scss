@@ -1,0 +1,29 @@
+.footer__footerFlex {
+  height: 25vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(90deg, #c7abba, #ffffff);
+  background-size: 400% 400%;
+  animation: footerGradient 7s ease infinite;
+  .footer__socialMediaFlex,
+  .footer__linksFlex {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@keyframes footerGradient {
+  0% {
+    background-position: 92% 0%;
+  }
+  50% {
+    background-position: 9% 100%;
+  }
+  100% {
+    background-position: 92% 0%;
+  }
+}

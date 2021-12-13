@@ -4,10 +4,10 @@ import landingB from "./images/craftylandingb.jpg"
 
 const landing = () => {
     return (
-        <section className="landingFlex">
-            <img src={landingA} className="landingA"/>
-            <img src={landingB} className="landingB"/>
-        </section>
+        <article className="landingFlex">
+            <img src={landingA} className="landingA" alt=""/>
+            <img src={landingB} className="landingB" alt=""/>
+        </article>
     )
 }
 
