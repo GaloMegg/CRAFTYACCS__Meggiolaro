@@ -1,0 +1,18 @@
+@use "../variables" as v;
+
+.cartwidgetFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 9;
+  background-color: white;
+  margin: 16vh 0% 0% 89%;
+  width: 8%;
+  height: 5vh;
+  border-radius: 16%;
+  .cartImg {
+    height: 3vh;
+    padding: 0% 0.5% 0% 0.5%;
+  }
+}
