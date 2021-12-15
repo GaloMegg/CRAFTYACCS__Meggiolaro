@@ -1,0 +1,15 @@
+@use "../variables" as v;
+
+.greetings--flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: v.$landingDark;
+  max-width: 100%;
+  .greetings__title {
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    color: v.$lightPink;
+  }
+}

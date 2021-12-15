@@ -1,13 +1,13 @@
-import cart from "./images/cart.png";
+import cartImg from "./images/cart.png";
 
 import React from 'react'
 
-const Cartwidget = () => {
+const Cartwidget = (arr) => {
     return (
         <>
             <div className="cartwidgetFlex">
-                <img src={cart} alt="" className="cartImg" />
-                <p>1</p>
+                <img src={cartImg} alt="" className="cartImg" />
+                <p>{arr.cart.length}</p>
             </div>
         </>
     )
