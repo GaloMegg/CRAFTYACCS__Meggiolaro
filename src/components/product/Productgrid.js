@@ -1,18 +1,22 @@
 import Greetings from "./Greetings"
 import Product from "./Product"
 
-let userName = "Galo"
-
 const Productgrid = () => {
+    //Stock of every item rendered
+    let stockA = 50;
+    let stockB = 25;
+    let stockC = 5;
+    //Dynamic username associated to the users profile.
+    let userName = "Galo"
     return (
         <>
             <div className="greetings--flex" >
                 <Greetings greetings={userName} />
             </div>
             <div className="products--flex" >
-                <Product />
-                <Product />
-                <Product />
+                <Product stock={stockA} />
+                <Product stock={stockB} />
+                <Product stock={stockC} />
             </div>
         </>
     )

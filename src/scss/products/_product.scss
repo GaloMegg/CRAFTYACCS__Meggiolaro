@@ -10,5 +10,21 @@
     justify-content: flex-start;
     margin: 1%;
     min-width: 25%;
+    .product__card--add{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      .product__card--btn{
+        width: 30%;
+        height: 5vh;
+      }
+      .product__card--text{
+        font-size: 1.2rem;
+      }
+    }
+    .product__card--btn-confirm{
+      margin: 3%;
+    }
   }
 }
