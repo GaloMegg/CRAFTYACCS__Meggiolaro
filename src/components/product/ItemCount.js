@@ -1,6 +1,7 @@
 import { useState } from "react"
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
+
     //Item counter state
     const [counter, setcounter] = useState(initial)
     //Handler funtion to increase the quantity of the item selected.
@@ -18,6 +19,7 @@ const ItemCount = ({ stock, initial }) => {
     //Handler funtion that (in the future) push to the cart, modify CartWidget and reset the numer of the quantity of the item selected.
     const ConfirmQuantity = () => {
         setcounter(1)
+
     }
     return (
         <>
