@@ -3,7 +3,7 @@ import Nav from "./components/nav/Nav";
 import Landing from "./components/landing/Landing";
 import Footer from "./components/footer/Footer";
 import Cartwidget from "./components/nav/Cartwidget"
-import Productgrid from "./components/product/Productgrid";
+import ItemListContainer from "./components/items/Itemlistcontainer";
 
 
 
@@ -18,7 +18,7 @@ const arr = [{ obj: 1 }, { obj: 2 }, { obj: 3 }, { obj: 4 }, { obj: 4 }, { obj: 
                     <Nav />
                 </div>
                 <Landing />
-                <Productgrid />
+                <ItemListContainer />
                 <Footer />
             </main>
         </>

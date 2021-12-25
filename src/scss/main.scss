@@ -69,14 +69,14 @@ a {
   text-decoration: none;
 }
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-@import "./variables";
-@import "nav/flexnav.scss";
+@import "variables";
+@import "nav/flexnav";
 @import "nav/header";
 @import "nav/nav";
 @import "nav/cartimg";
 @import "landing/landingflex";
 @import "landing/landinga";
 @import "landing/landingb";
-@import "products/greetings";
 @import "products/product";
+@import "loading/loading";
 @import "footer/footer";

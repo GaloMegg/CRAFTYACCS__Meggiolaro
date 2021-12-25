@@ -1,0 +1,21 @@
+@use "../variables" as v;
+.loadingFrame--flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: v.$landingDark;
+  .loadingFrame--try {
+    width: 40%;
+    animation: rotation 7s infinite linear;
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
