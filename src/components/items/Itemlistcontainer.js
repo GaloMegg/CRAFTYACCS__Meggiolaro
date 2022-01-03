@@ -7,7 +7,7 @@ const ItemListContainer = () => {
     const [loading, setloading] = useState(true)
     useEffect(() => {
         const productsRest = fetch(
-            'https://fakestoreapi.com/products?limit=5')
+            'https://fakestoreapi.com/products?limit=7')
         productsRest.then((res) => {
             const finalProduct = res.json()
             return finalProduct
