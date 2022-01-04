@@ -1,9 +1,8 @@
-const Links = () => {
+const Links = ({linkName, linkClass}) => {
+    
     return (
         <>
-            <a href="#" className="links">Productos</a>
-            <a href="#" className="links">¿Quiénes somos?</a>
-            <a href="#" className="links">Contacto</a>
+            <a href="#" className={linkClass}>{linkName}</a>
         </>
     )
 }

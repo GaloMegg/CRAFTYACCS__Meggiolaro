@@ -1,18 +1,15 @@
 import ItemCount from "../items/ItemCount"
-const ItemDetail = ({ data }) => {
-    const [details] = data
-    const { image, description, price, title } = details
+const ItemDetail = ({ image, title, description, price }) => {
     return (
         <div className="detailContainer">
-            <img src={image} alt="" className="detailContainer__img" style={{ width: 100 }} />
+            <img src={image} alt="" className="detailContainer__img"  />
             <div className="">
                 <p className="">{title}</p>
                 <p className="">{description}</p>
                 <p className="">{price}</p>
-                <ItemCount />
+                <ItemCount stock={10} initial={1} />
             </div>
         </div>
     )
 }
-
 export default ItemDetail
