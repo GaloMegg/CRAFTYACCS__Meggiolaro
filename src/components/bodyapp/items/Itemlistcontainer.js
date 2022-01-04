@@ -14,8 +14,9 @@ const ItemListContainer = () => {
         })
             .then((finalProduct) => {
                 setproducts(finalProduct)
+                setloading(false)
             })
-        setloading(false)
+
     }, []);
 
     if (loading) {

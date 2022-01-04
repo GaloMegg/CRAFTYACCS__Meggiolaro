@@ -1,6 +1,6 @@
 import landingA from "./images/craftylandinga.jpg"
 import landingB from "./images/craftylandingb.jpg"
-const landing = () => {
+const Landing = () => {
     return (
         <article className="landingFlex">
             <img src={landingA} className="landingA" alt="" />
@@ -8,4 +8,4 @@ const landing = () => {
         </article>
     )
 }
-export default landing
+export default Landing

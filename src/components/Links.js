@@ -1,8 +1,10 @@
-const Links = ({linkName, linkClass}) => {
-    
+import { Link } from "react-router-dom"
+
+const Links = ({ linkName, linkClass, route}) => {
+
     return (
         <>
-            <a href="#" className={linkClass}>{linkName}</a>
+            <Link to={`/${route}/`} path="" className={linkClass}>{linkName}</Link>
         </>
     )
 }

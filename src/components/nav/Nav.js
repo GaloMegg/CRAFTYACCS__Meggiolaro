@@ -4,23 +4,26 @@ const Nav = () => {
         {
             "id": 1,
             "linkName": "Productos",
-            "class": "links"
+            "linkClass": "links",
+            "route": "prod"
         },
         {
             "id": 2,
             "linkName": "Contacto",
-            "class": "links"
+            "linkClass": "links",
+            "route": "contact"
         },
         {
             "id": 3,
             "linkName": "¿Quiénes somos?",
-            "class": "links"
+            "linkClass": "links",
+            "route": "whoweare"
         }
     ]
 
     return (
         <nav className="navFlex">
-            {linkArr.map((link) => { return (<Links key={link.id} linkName={link.linkName} linkClass={link.class} />) })}
+            {linkArr.map((link) => { return (<Links key={link.id} {...link} />) })}
         </nav>
     )
 }

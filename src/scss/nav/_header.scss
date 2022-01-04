@@ -1,5 +1,14 @@
-.header{
-    font-size: 1.2rem;
-    font-family: "Oswald", sans-serif;
+@use "../variables" as v;
 
+.header {
+  font-size: 1.2rem;
+  font-family: "Oswald", sans-serif;
+}
+.links {
+  color: v.$darkerBlack;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  &:hover {
+    color: white;
+  }
 }
