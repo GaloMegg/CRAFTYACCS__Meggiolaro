@@ -6,15 +6,12 @@ import Landing from "./landing/Landing"
 const Bodyapp = () => {
     return (
         <Routes>
-            <Route path="/index" element={<Landing />} />
+            <Route path="/" element={<Landing />} />
             <Route path="/prod/" element={<ItemListContainer />} />
-            <Route path="/prod/:productid" element={<ItemDetailContainer />} />
+            <Route path="/prod/cat/:categ" element={<ItemListContainer />} />
+            <Route path="/prod/product/:id" element={<ItemDetailContainer />} />
         </Routes>
     )
 }
 
 export default Bodyapp
-{/* 
-
-                
-                 */}
