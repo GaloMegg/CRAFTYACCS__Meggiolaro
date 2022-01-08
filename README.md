@@ -1,9 +1,9 @@
-<details>
 <summary>
 
 ## Proyecto
 
 </summary>
+<details>
 
 <p>
 
@@ -15,11 +15,12 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 </p>
 
 </details>
-<details><summary>
+<summary>
 
 ## Alumno
 
 </summary>
+<details>
 
 <p>
 
@@ -34,11 +35,13 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </details>
 
-<details><summary>
+<summary>
 
 ## Universidad
 
 </summary>
+
+<details>
 
 <p>
 
@@ -51,11 +54,13 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </details>
 
-<details><summary>
+<summary>
 
 ## Profesor
 
 </summary>
+
+<details>
 
 <p>
 
@@ -68,11 +73,13 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </details>
 
-<details><summary>
+<summary>
 
 ## Tutor
 
 </summary>
+
+<details>
 
 <p>
 
