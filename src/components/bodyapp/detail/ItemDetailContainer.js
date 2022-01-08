@@ -11,14 +11,13 @@ const ItemDetailContainer = () => {
     //I make the request to the API and destructure it to make the item detail rendering way much easier. Spread operator simplifies a lot the work. 
     useEffect(() => {
         const detailRest = fetch(
-            'https://fakestoreapi.com/products');
+            `https://fakestoreapi.com/products/${id}`);
         detailRest.then((res) => {
             const finalDetail = res.json()
             return finalDetail
         })
             .then((finalDetail) => {
-                const details = finalDetail.find((element) => { return element.id == id })
-                setDetail(details)
+                setDetail(finalDetail)
                 setloading(false)
             });
     }, []);

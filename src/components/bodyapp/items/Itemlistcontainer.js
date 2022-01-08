@@ -8,8 +8,14 @@ const ItemListContainer = () => {
     const [loading, setloading] = useState(true)
     const { categ } = useParams()
     useEffect(() => {
-        const productsRest = fetch(
-            `https://fakestoreapi.com/products`)
+        let url
+        if (categ) {
+            url = `https://fakestoreapi.com/products/category/${categ}`;
+        }
+        else if (categ == undefined || categ === "all") {
+            url = `https://fakestoreapi.com/products`;
+        };
+        const productsRest = fetch(url)
         productsRest.then((res) => {
             const finalProduct = res.json()
             return finalProduct
