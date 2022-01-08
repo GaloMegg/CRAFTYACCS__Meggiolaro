@@ -1,28 +1,29 @@
-
 <details>
 <summary>
 
-# Proyecto
+## Proyecto
 
 </summary>
 
 <p>
 
-## Crafty Accesorios
-*E-commerce de artesanías, producto de un proyecto final de la misma universidad*
+### Crafty Accesorios
+
+_E-commerce de artesanías, producto de un proyecto final de la misma universidad_
 [@CraftyAccs](https://www.instagram.com/craftyaccs/)
+
 </p>
 
 </details>
 <details><summary>
 
-# Alumno
+## Alumno
 
 </summary>
 
 <p>
 
-## Galo Meggiolaro
+### Galo Meggiolaro
 
 > "Front-end developer en eterno entrenamiento"<
 
@@ -35,30 +36,30 @@
 
 <details><summary>
 
-# Universidad
+## Universidad
 
 </summary>
 
 <p>
 
-## CODERHOUSE
+### CODERHOUSE
 
+> _Democratizando la educación_<
+> [CODERHOUSE](https://www.coderhouse.com/)
 
-> *Democratizando la educación*<
-[CODERHOUSE](https://www.coderhouse.com/)
 </p>
 
 </details>
 
 <details><summary>
 
-# Profesor
+## Profesor
 
 </summary>
 
 <p>
 
-## Horacio Gutierrez
+### Horacio Gutierrez
 
 [GitHub](https://github.com/HoracioGutierrez)
 [Linked-In](https://www.linkedin.com/in/horacioegutierrez/)
@@ -69,13 +70,13 @@
 
 <details><summary>
 
-# Tutor
+## Tutor
 
 </summary>
 
 <p>
 
-## Patricio Pallua
+### Patricio Pallua
 
 </p>
 
