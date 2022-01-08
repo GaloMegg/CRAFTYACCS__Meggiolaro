@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList"
 import Loading from "./loading";
-
 const ItemListContainer = () => {
     const [products, setproducts] = useState([])
     const [loading, setloading] = useState(true)
@@ -42,5 +41,4 @@ const ItemListContainer = () => {
         )
     }
 }
-
 export default ItemListContainer

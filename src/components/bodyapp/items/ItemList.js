@@ -1,6 +1,5 @@
 import Item from "../items/Item";
 import Categories from "./categories/Categories";
-
 const ItemList = ({ data }) => {
     return (
         <>
@@ -13,5 +12,4 @@ const ItemList = ({ data }) => {
         </>
     )
 }
-
 export default ItemList

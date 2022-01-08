@@ -12,5 +12,4 @@ const Cartwidget = (arr) => {
         </>
     )
 }
-
 export default Cartwidget

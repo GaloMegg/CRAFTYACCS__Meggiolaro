@@ -1,7 +1,7 @@
 import Header from "./components/nav/Header";
 import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
-import Cartwidget from "./components/nav/Cartwidget"
+import CartWidget from "./components/nav/CartWidget"
 import Bodyapp from "./components/bodyapp/Bodyapp";
 
 function MainApp() {
@@ -10,7 +10,7 @@ function MainApp() {
         <>
             <main className="mainDisplay">
                 <div className="flexNav">
-                    <Cartwidget cart={arr} />
+                    <CartWidget cart={arr} />
                     <Header />
                     <Nav />
                 </div>

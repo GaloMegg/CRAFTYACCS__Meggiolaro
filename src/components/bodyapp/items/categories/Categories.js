@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-
 const Categories = () => {
     const categoriesList = [
         {
@@ -35,5 +34,4 @@ const Categories = () => {
         </div>
     )
 }
-
 export default Categories

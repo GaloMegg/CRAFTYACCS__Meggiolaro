@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-
 import ItemDetail from "./ItemDetail"
 import Loading from "../items/loading";
 import { useParams } from "react-router-dom";
-
 const ItemDetailContainer = () => {
     const [detail, setDetail] = useState([])
     const [loading, setloading] = useState(true)
@@ -36,6 +34,4 @@ const ItemDetailContainer = () => {
         )
     }
 }
-
-
 export default ItemDetailContainer

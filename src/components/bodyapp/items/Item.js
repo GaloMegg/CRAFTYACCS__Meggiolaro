@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-
 const Item = ({ image, title, price, id }) => {
     const OnAdd = () => { }
     return (
@@ -11,5 +10,4 @@ const Item = ({ image, title, price, id }) => {
         </div >
     )
 }
-
 export default Item

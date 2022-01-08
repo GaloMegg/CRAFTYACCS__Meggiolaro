@@ -71,6 +71,7 @@ a {
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 @import "variables";
 @import "components/itemcount";
+@import "components/formtry";
 @import "nav/flexnav";
 @import "nav/header";
 @import "nav/nav";
@@ -80,5 +81,6 @@ a {
 @import "landing/landingb";
 @import "products/product";
 @import "detail/product";
+@import "form/contactform";
 @import "loading/loading";
 @import "footer/footer";

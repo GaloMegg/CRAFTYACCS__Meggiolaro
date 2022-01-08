@@ -20,7 +20,6 @@ const Nav = () => {
             "route": "whoweare"
         }
     ]
-
     return (
         <nav className="navFlex">
             {linkArr.map((link) => { return (<Links key={link.id} {...link} />) })}

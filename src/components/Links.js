@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Links = ({ linkName, linkClass, route}) => {
+const Links = ({ linkName, linkClass, route }) => {
 
     return (
         <>
