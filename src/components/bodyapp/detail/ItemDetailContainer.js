@@ -6,7 +6,6 @@ const ItemDetailContainer = () => {
     const [detail, setDetail] = useState([])
     const [loading, setloading] = useState(true)
     const { id } = useParams()
-    //I make the request to the API and destructure it to make the item detail rendering way much easier. Spread operator simplifies a lot the work. 
     useEffect(() => {
         const detailRest = fetch(
             `https://fakestoreapi.com/products/${id}`);
@@ -19,6 +18,7 @@ const ItemDetailContainer = () => {
                 setloading(false)
             });
     }, []);
+    
     if (loading) {
         return (
             <>

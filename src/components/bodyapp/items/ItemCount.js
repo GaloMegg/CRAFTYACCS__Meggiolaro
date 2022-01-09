@@ -18,16 +18,17 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     //Handler funtion that (in the future) push to the cart, modify CartWidget and reset the numer of the quantity of the item selected.
     const ConfirmQuantity = () => {
         setcounter(1)
+        onAdd(counter)
 
     }
     return (
         <div className="product__flex">
             <div className="product__card--add">
                 <button className="product__card--btn" onClick={DecreaseQuantity}>-</button>
-                <p className="product__card--text">{counter}</p>
+                <p className="product__card--text" >{counter}</p>
                 <button className="product__card--btn" onClick={IncreaseQuantity}> +</button>
             </div>
-            <button className="product__card--btn-confirm" onClick={ConfirmQuantity} >Confirm</button>
+            <button className="product__card--btn-confirm" onClick={ConfirmQuantity}  >Confirm</button>
         </div>
     )
 }

@@ -9,8 +9,8 @@ function MainApp() {
     return (
         <>
             <main className="mainDisplay">
-                <div className="flexNav">
                     <CartWidget cart={arr} />
+                <div className="flexNav">
                     <Header />
                     <Nav />
                 </div>

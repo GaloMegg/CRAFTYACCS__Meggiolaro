@@ -4,16 +4,28 @@ import Contact from "./Contact"
 const ContactContainer = () => {
 
     const [status, setStatus] = useState()
-    function Onchange(e) {
+    function OnchangeName(e) {
         let validation = validator.isAlpha(e.key)
-
         if (!validation) {
             e.preventDefault()
         }
     }
+    function OnchangeNumber(e) {
+        let validation = validator.isNumeric(e.key,true)
+        if (!validation && e.key!=="Backspace") {
+            e.preventDefault()
+        }
+    }
+    
+    function validationEmail(e) {
+        let validation = validator.isEmail(e.target.value)
+        if (!validation) {
+            console.log("lolo")
+        }
+    }
     return (
         <div>
-            <Contact onKeyDown={Onchange} />
+            <Contact onKeyDownName={OnchangeName} emailValidaiton={validationEmail} OnchangeNumber={OnchangeNumber} />
         </div>
     )
 }

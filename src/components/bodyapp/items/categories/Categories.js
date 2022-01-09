@@ -29,7 +29,7 @@ const Categories = () => {
         }
     ]
     return (
-        <div>
+        <div className="cat">
             {categoriesList.map((element) => { return (<Link key={element.id} to={`/prod/cat/${element.urlParam}`} className="cat__links"> {element.urlname}  </Link>) })}
         </div>
     )
