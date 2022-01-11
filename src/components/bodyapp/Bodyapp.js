@@ -3,6 +3,7 @@ import ContactContainer from "./contact/ContactContainer"
 import ItemDetailContainer from "./detail/ItemDetailContainer"
 import ItemListContainer from "./items/ItemListContainer"
 import Landing from "./landing/Landing"
+import Whoweare from "./whoweare/Whoweare"
 
 const Bodyapp = () => {
     return (
@@ -12,6 +13,7 @@ const Bodyapp = () => {
             <Route path="/prod/cat/:categ" element={<ItemListContainer />} />
             <Route path="/prod/product/:id" element={<ItemDetailContainer />} />
             <Route path="/contact/" element={<ContactContainer />} />
+            <Route path="/whoweare/" element={<Whoweare />} />
         </Routes>
     )
 }
