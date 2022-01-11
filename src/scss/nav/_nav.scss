@@ -1,15 +1,11 @@
 @use "../variables" as v;
+@import "../mixin.scss";
 
 .navFlex {
   display: flex;
   justify-content: space-evenly;
   min-width: 60%;
   .links {
-    color: v.$darkerBlack;
-    font-family: "Oswald", sans-serif;
-    font-size: 0.8rem;
-    &:hover{
-      color: white;
-    }
-  }
+    @include links
+}
 }

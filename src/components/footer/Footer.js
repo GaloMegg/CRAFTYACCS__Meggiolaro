@@ -1,5 +1,5 @@
 import Links from "../Links"
-import Socialmedia from "./Socialmedia"
+import Socialmedia from "../Socialmedia"
 const Footer = () => {
     const linkArr = [
         {

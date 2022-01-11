@@ -1,0 +1,19 @@
+@use "../variables" as v;
+@import "../mixin.scss";
+
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+
+  margin: 3%;
+  .socialmedia-p {
+    font-size: 1.1rem;
+    font-family: v.$fontFamily;
+  }
+  .socialmedia--links {
+    @include links($darkPink, 1rem);
+  }
+}

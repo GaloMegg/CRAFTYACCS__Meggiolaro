@@ -70,8 +70,10 @@ a {
 }
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 @import "variables";
+@import "mixin";
 @import "components/itemcount";
 @import "components/formtry";
+@import "components/socialmedia";
 @import "nav/flexnav";
 @import "nav/header";
 @import "nav/nav";
