@@ -1,0 +1,33 @@
+@use "../variables" as v;
+
+.whoweare {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  .whoweare__flex-a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .whoweare__flex-a--try {
+      max-width: 50%;
+      margin: 2%;
+    }
+  }
+  .whoweare__flex-b {
+    text-align: center;
+    .whoweare__flex-b--title {
+      font-size: 1.4rem;
+      font-family: v.$fontFamily;
+    }
+    .whoweare__flex-b--slogan {
+      font-size: 1rem;
+      font-family: v.$fontFamily;
+    }
+    .whoweare__flex-b--description {
+      font-size: 1.2rem;
+      font-family: v.$fontFamily;
+    }
+  }
+}
