@@ -7,7 +7,7 @@ const ContactContainer = () => {
         "userSurname": true,
         "userPhone": true,
         "userEmail": true,
-        "buttonAllowed": true
+        "buttonAllowed": false
     })
     function Reducer(state, action) {
         switch (action) {
