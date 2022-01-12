@@ -7,13 +7,12 @@
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-
   margin: 3%;
+  text-align: center;
   .socialmedia-p {
-    font-size: 1.1rem;
-    font-family: v.$fontFamily;
-  }
+    font-size: 0.8rem;
+font-family: v.$fontFamily  }
   .socialmedia--links {
-    @include links($darkPink, 1rem);
+    @include links($darkPink, 0.8rem);
   }
 }
