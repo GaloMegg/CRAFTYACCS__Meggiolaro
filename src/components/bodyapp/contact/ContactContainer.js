@@ -1,31 +1,89 @@
-import { useState } from "react"
+import { useReducer } from "react"
 import validator from 'validator';
 import Contact from "./Contact"
 const ContactContainer = () => {
-
-    const [status, setStatus] = useState()
-    function OnchangeName(e) {
-        let validation = validator.isAlpha(e.key)
+    const [state, dispatch] = useReducer(Reducer, {
+        "userName": true,
+        "userSurname": true,
+        "userPhone": true,
+        "userEmail": true,
+        "buttonAllowed": true
+    })
+    function Reducer(state, action) {
+        switch (action) {
+            case "userNameOk":
+                return { ...state, userName: true };
+            case "userNameNotOk":
+                return { ...state, userName: false };
+            case "userSurnameOk":
+                return { ...state, userSurname: true };
+            case "userSurnameNotOk":
+                return { ...state, userSurname: false };
+            case "userPhoneOk":
+                return { ...state, userPhone: true };
+            case "userPhoneNotOk":
+                return { ...state, userPhone: false };
+            case "userEmailOk":
+                return { ...state, userEmail: true };
+            case "userEmailNotOk":
+                return { ...state, userEmail: false };
+            case "buttonAllowed":
+                return { ...state, buttonAllowed: true };
+            case "buttonNotAllowed":
+                return { ...state, buttonAllowed: false };
+        }
+    }
+    function ValidationName(e) {
+        let validation = validator.isAlpha(e.target.value)
         if (!validation) {
-            e.preventDefault()
+            dispatch("userNameNotOk")
+            dispatch("buttonNotAllowed")
         }
-    }
-    function OnchangeNumber(e) {
-        let validation = validator.isNumeric(e.key,true)
-        if (!validation && e.key!=="Backspace") {
-            e.preventDefault()
+        else {
+            dispatch("userNameOk")
+            if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
+
     }
-    
-    function validationEmail(e) {
+    function ValidationSurname(e) {
+        let validation = validator.isAlpha(e.target.value)
+        if (!validation) {
+            dispatch("userSurnameNotOk")
+            dispatch("buttonNotAllowed")
+        }
+        else {
+            dispatch("userSurnameOk")
+            if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
+        }
+
+    }
+    function ValidationPhone(e) {
+        let validation = validator.isNumeric(e.target.value)
+        if (!validation) {
+            dispatch("userPhoneNotOk")
+            dispatch("buttonNotAllowed")
+        }
+        else {
+            dispatch("userPhoneOk")
+            if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
+        }
+
+    }
+    function ValidationEmail(e) {
         let validation = validator.isEmail(e.target.value)
         if (!validation) {
-            console.log("lolo")
+            dispatch("userEmailNotOk")
+            dispatch("buttonNotAllowed")
         }
+        else {
+            dispatch("userEmailOk")
+            if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
+        }
+
     }
     return (
         <div>
-            <Contact onKeyDownName={OnchangeName} emailValidaiton={validationEmail} OnchangeNumber={OnchangeNumber} />
+            <Contact ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail}   {...state} />
         </div>
     )
 }
