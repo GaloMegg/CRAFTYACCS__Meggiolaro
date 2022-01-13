@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import Cart from "./cart/Cart"
 import ContactContainer from "./contact/ContactContainer"
 import ItemDetailContainer from "./detail/ItemDetailContainer"
 import ItemListContainer from "./items/ItemListContainer"
@@ -14,6 +15,7 @@ const Bodyapp = () => {
             <Route path="/prod/product/:id" element={<ItemDetailContainer />} />
             <Route path="/contact/" element={<ContactContainer />} />
             <Route path="/whoweare/" element={<Whoweare />} />
+            <Route path="/cart/" element={<Cart />} />
         </Routes>
     )
 }

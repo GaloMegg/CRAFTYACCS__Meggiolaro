@@ -18,8 +18,6 @@ const ItemDetailContainer = () => {
                 setloading(false)
             });
     }, []);
-
-
     return (loading ? <Loading /> : <ItemDetail {...detail} />
     )
 

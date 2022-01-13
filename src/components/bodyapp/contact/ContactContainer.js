@@ -78,9 +78,9 @@ const ContactContainer = () => {
         }
     }
     return (
-        <div>
+        <section>
             <Contact ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail}   {...state} />
-        </div>
+        </section>
     )
 }
 export default ContactContainer
