@@ -59,7 +59,7 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </summary>
 
-<details>
+<details> profesor
 
 <p>
 
@@ -78,7 +78,7 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </summary>
 
-
+<details>
 
 <p>
 
@@ -88,4 +88,4 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </p>
 
-
+</details>
