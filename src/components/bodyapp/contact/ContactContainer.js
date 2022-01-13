@@ -43,7 +43,6 @@ const ContactContainer = () => {
             dispatch("userNameOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-
     }
     function ValidationSurname(e) {
         let validation = validator.isAlpha(e.target.value)
@@ -55,7 +54,6 @@ const ContactContainer = () => {
             dispatch("userSurnameOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-
     }
     function ValidationPhone(e) {
         let validation = validator.isNumeric(e.target.value)
@@ -67,7 +65,6 @@ const ContactContainer = () => {
             dispatch("userPhoneOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-
     }
     function ValidationEmail(e) {
         let validation = validator.isEmail(e.target.value)
@@ -79,7 +76,6 @@ const ContactContainer = () => {
             dispatch("userEmailOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-
     }
     return (
         <div>
