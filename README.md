@@ -47,8 +47,7 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 ### CODERHOUSE
 
-> _Democratizando la educación_
-> [CODERHOUSE](https://www.coderhouse.com/)
+> _Democratizando la educación_ > [CODERHOUSE](https://www.coderhouse.com/)
 
 </p>
 
@@ -84,6 +83,8 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 <p>
 
 ### Patricio Pallua
+
+[Linked-In](https://www.linkedin.com/in/patricio-federico-pallua-pessagno/)
 
 </p>
 

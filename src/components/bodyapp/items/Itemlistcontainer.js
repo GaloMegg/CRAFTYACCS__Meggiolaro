@@ -27,18 +27,8 @@ const ItemListContainer = () => {
                 setloading(false)
             })
     }, [categ]);
-    if (loading) {
-        return (
-            <>
-                <Loading />
-            </>
-        )
-    } else {
-        return (
-            <>
-                <ItemList data={products} />
-            </>
-        )
-    }
+    return (loading ? <Loading /> : <ItemList data={products} />
+    )
 }
+
 export default ItemListContainer

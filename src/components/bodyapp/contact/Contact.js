@@ -12,7 +12,7 @@ const Contact = ({ ValidationName, ValidationSurname, ValidationPhone, Validatio
                 {/* Email */}
                 <input type="email" id="email" placeholder="Email" className={userEmail ? "form__try" : "notValid"} required onBlur={ValidationEmail} />
                 {/* Buttons */}
-                <button type="submit" className="contactForm__try" disabled={buttonAllowed ? "" : "true"}>Enviar</button>
+                <button type="submit" className="contactForm__try" disabled={!buttonAllowed && "true"}>Enviar</button>
                 <button type="reset" className="contactForm__try">Borrar</button>
             </form>
         </>

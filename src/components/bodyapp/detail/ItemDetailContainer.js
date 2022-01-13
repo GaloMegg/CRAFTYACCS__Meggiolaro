@@ -18,20 +18,10 @@ const ItemDetailContainer = () => {
                 setloading(false)
             });
     }, []);
-    
-    if (loading) {
-        return (
-            <>
-                <Loading />
-            </>
-        )
-    }
-    else {
-        return (
-            <>
-                <ItemDetail {...detail} />
-            </>
-        )
-    }
+
+
+    return (loading ? <Loading /> : <ItemDetail {...detail} />
+    )
+
 }
 export default ItemDetailContainer
