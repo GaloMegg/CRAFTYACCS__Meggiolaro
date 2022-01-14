@@ -20,6 +20,10 @@ const Context = ({ children }) => {
                 return {
                     ...state, cart: [...action.payload.newQuantity]
                 }
+            case "DeleteItem":
+                return {
+                    ...state, cart: [...action.payload.newCleanArray]
+                }
             case "EmptyCart":
                 return {
                     cart: action.payload.cart
@@ -44,7 +48,15 @@ const Context = ({ children }) => {
         }
     }
 
+    function DeleteItem(id) {
+        console.log(id)
+        let newArray = [...state.cart]
+        let newCleanArray = newArray.filter((element) => element.id != id)
+        console.log(newCleanArray)
+        if (newCleanArray.length == 0) { EmptyCart() }
+        else { dispatch({ type: "DeleteItem", payload: { newCleanArray: [...newCleanArray] } }) }
 
+    }
 
 
     function TotalPricing(price, q) {
@@ -54,7 +66,6 @@ const Context = ({ children }) => {
         setTotalPrice(0)
         setQuantity(0)
         dispatch({ type: "EmptyCart", payload: { cart: [] } })
-
     }
 
     const contextVariables = {
@@ -65,7 +76,7 @@ const Context = ({ children }) => {
 
 
 
-    const fullContext = { contextVariables, AddQuantity, PushCart, TotalPricing, EmptyCart }
+    const fullContext = { contextVariables, AddQuantity, PushCart, TotalPricing, EmptyCart, DeleteItem }
 
 
 

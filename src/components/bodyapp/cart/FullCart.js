@@ -16,9 +16,9 @@ const FullCart = () => {
                 <button className="cart__buttons-try">Finalizar</button>
             </div>
             <div className="products--flex ">
-                {state.map((e, i) => {
+                {state.map((e) => {
                     return (
-                        <Item key={i} image={e.image} price={e.price} title={e.title} cartQ={e.quantity} />
+                        <Item key={e.id} image={e.image} price={e.price} title={e.title} cartQ={e.quantity} idDelete={e.id} />
                     )
                 })}
             </div >
