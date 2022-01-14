@@ -20,6 +20,10 @@ const Context = ({ children }) => {
                 return {
                     ...state, cart: [...action.payload.newQuantity]
                 }
+            case "EmptyCart":
+                return {
+                    cart: action.payload.cart
+                }
         }
     }
 
@@ -32,13 +36,11 @@ const Context = ({ children }) => {
         if (exist == -1) {
             product.quantity = q
             dispatch({ type: "AddCart", payload: { product: { ...product } } })
-            // dispatch({ type: "IncrementQuantity", payload: { product: product, ObjQ: ObjQ } })
         }
         else {
             let newQuantity = [...state.cart]
             newQuantity[exist].quantity += q
             dispatch({ type: "IncrementQuantity", payload: { newQuantity: newQuantity } })
-            // dispatch({ type: "IncrementExistentQuantity", payload: { ObjQ: ObjQ } })
         }
     }
 
@@ -46,12 +48,13 @@ const Context = ({ children }) => {
 
 
     function TotalPricing(price, q) {
-        setTotalPrice(totalPrice + (price * q))
+        setTotalPrice(Math.floor(totalPrice + (price * q)))
     }
     function EmptyCart() {
         setTotalPrice(0)
-        // setCart([])
         setQuantity(0)
+        dispatch({ type: "EmptyCart", payload: { cart: [] } })
+
     }
 
     const contextVariables = {

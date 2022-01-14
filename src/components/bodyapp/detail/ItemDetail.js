@@ -5,9 +5,9 @@ import ItemCount from "./ItemCount"
 const ItemDetail = ({ image, title, description, price, product, id }) => {
     const { AddQuantity, PushCart, TotalPricing } = useContext(firstcontext)
     const ListernerOfQuantity = (counter) => {
-        // AddQuantity(counter)
+        AddQuantity(counter)
         PushCart(product, counter)
-        // TotalPricing(price, counter)
+        TotalPricing(price, counter)
     }
     return (
         <div className="detailContainer">
