@@ -1,4 +1,6 @@
 .products--flex {
+  min-height: 80vh;
+  width: 100%;
   padding: 1%;
   display: flex;
   justify-content: space-around;
@@ -15,9 +17,8 @@
     background-color: white;
     text-align: center;
     border-radius: 16px;
-    .product__card--img{
+    .product__card--img {
       max-width: 100%;
     }
-    
   }
 }

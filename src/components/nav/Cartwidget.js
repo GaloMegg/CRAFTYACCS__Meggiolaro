@@ -4,8 +4,8 @@ import { useContext } from "react";
 import { firstcontext } from "../context/Context";
 
 const Cartwidget = () => {
-    const { contexReducer } = useContext(firstcontext)
-    const { quantity } = contexReducer
+    const { contextVariables } = useContext(firstcontext)
+    const { quantity } = contextVariables
     return (
 
         <article className="cartwidgetFlex">

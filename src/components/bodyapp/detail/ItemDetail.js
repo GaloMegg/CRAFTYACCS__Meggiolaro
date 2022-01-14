@@ -2,12 +2,12 @@ import { useContext, useState } from "react"
 import { firstcontext } from "../../context/Context"
 import ItemCount from "./ItemCount"
 
-const ItemDetail = ({ image, title, description, price, product }) => {
+const ItemDetail = ({ image, title, description, price, product, id }) => {
     const { AddQuantity, PushCart, TotalPricing } = useContext(firstcontext)
     const ListernerOfQuantity = (counter) => {
-        AddQuantity(counter)
-        PushCart(product)
-        TotalPricing(price, counter)
+        // AddQuantity(counter)
+        PushCart(product, counter)
+        // TotalPricing(price, counter)
     }
     return (
         <div className="detailContainer">

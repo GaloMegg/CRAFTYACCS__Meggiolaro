@@ -3,44 +3,70 @@ import { createContext, useReducer, useState } from "react"
 
 const Context = ({ children }) => {
     const { Provider } = firstcontext;
-    const [contexReducer, dispatch] = useReducer(Reducer, {
-        quantity: 0,
-        totalPrice: 0,
-        cart: []
-    })
-    // const [quantity, setQuantity] = useState(0)
-    // const [totalPrice, setTotalPrice] = useState(0)
-    function Reducer(contexReducer, action) {
+    const [totalPrice, setTotalPrice] = useState(0)
+    const [quantity, setQuantity] = useState(0)
+    const [state, dispatch] = useReducer(Reducer,
+        {
+            cart: [],
+        })
+
+    function Reducer(state, action) {
         switch (action.type) {
-            case "AddQuantity":
-                return {
-                    ...contexReducer,
-                    quantity: contexReducer.quantity + action.realquantity
-                }
             case "AddCart":
-                return { ...contexReducer, cart: [...contexReducer.cart, ...action.payload.prev] }
-            case "TotalPricing":
                 return {
-                    ...contexReducer, totalPrice: contexReducer.totalPrice + (action.payload.price * action.payload.quantity)
+                    ...state, cart: [...state.cart, action.payload.product]
                 }
-            default:
+            case "IncrementQuantity":
                 return {
-                    ...contexReducer,
-                    quantity: 2
+                    ...state, cart: [...action.payload.newQuantity]
                 }
         }
     }
+
+
     function AddQuantity(q) {
-        dispatch({ type: "AddQuantity", realquantity: q })
+        setQuantity(quantity + q)
     }
-    function PushCart(producto) {
-        dispatch({ type: "AddCart", payload: { prev: [producto] } })
-    }
-    function TotalPricing(price, q) {
-        dispatch({ type: "TotalPricing", payload: { price: price, quantity: q } })
+    function PushCart(product, q) {
+        let exist = state.cart.findIndex((element) => element.id === product.id)
+        if (exist == -1) {
+            product.quantity = q
+            dispatch({ type: "AddCart", payload: { product: { ...product } } })
+            // dispatch({ type: "IncrementQuantity", payload: { product: product, ObjQ: ObjQ } })
+        }
+        else {
+            let newQuantity = [...state.cart]
+            newQuantity[exist].quantity += q
+            dispatch({ type: "IncrementQuantity", payload: { newQuantity: newQuantity } })
+            // dispatch({ type: "IncrementExistentQuantity", payload: { ObjQ: ObjQ } })
+        }
     }
 
-    const fullContext = { contexReducer, AddQuantity, PushCart, TotalPricing }
+
+
+
+    function TotalPricing(price, q) {
+        setTotalPrice(totalPrice + (price * q))
+    }
+    function EmptyCart() {
+        setTotalPrice(0)
+        // setCart([])
+        setQuantity(0)
+    }
+
+    const contextVariables = {
+        quantity,
+        totalPrice,
+        state: state.cart
+    }
+
+
+
+    const fullContext = { contextVariables, AddQuantity, PushCart, TotalPricing, EmptyCart }
+
+
+
+
     return (
         <Provider value={fullContext}>
             {children}
