@@ -1,16 +1,19 @@
-import { useState } from "react"
-import ItemCount from "../items/ItemCount"
-const ItemDetail = ({ image, title, description, price }) => {
-    const [quantity, setQuantity] = useState(0)
+import { useContext, useState } from "react"
+import { firstcontext } from "../../context/Context"
+import ItemCount from "./ItemCount"
+
+const ItemDetail = ({ image, title, description, price, product }) => {
+    const { AddQuantity, PushCart, TotalPricing } = useContext(firstcontext)
     const ListernerOfQuantity = (counter) => {
-        let a = counter + quantity
-        setQuantity(a)
+        AddQuantity(counter)
+        PushCart(product)
+        TotalPricing(price, counter)
     }
     return (
         <div className="detailContainer">
             <img src={image} alt="" className="detailContainer__img" />
             <div className="detailContainer__details">
-                <p>{quantity}</p>
+                {/* <p>{quantity}</p> */}
                 <p className="">{title}</p>
                 <p className="">{description}</p>
                 <p className="">{price}</p>

@@ -1,14 +1,18 @@
 import cartImg from "./images/cart.png";
-
-import React from 'react'
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { firstcontext } from "../context/Context";
 
-const Cartwidget = (arr) => {
+const Cartwidget = () => {
+    const { contexReducer } = useContext(firstcontext)
+    const { quantity } = contexReducer
     return (
+
         <article className="cartwidgetFlex">
+
+            <img src={cartImg} alt="" className="cartImg" />
             <Link to={"/cart"}>
-                <img src={cartImg} alt="" className="cartImg" />
-                <p>{arr.cart.length}</p>
+                <p>{quantity}</p>
             </Link>
         </article>
     )

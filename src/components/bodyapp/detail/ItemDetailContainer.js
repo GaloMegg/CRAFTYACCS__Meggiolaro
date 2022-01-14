@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail"
 import Loading from "../items/loading";
 import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
-    const [detail, setDetail] = useState([])
+    const [detail, setDetail] = useState()
     const [loading, setloading] = useState(true)
     const { id } = useParams()
     useEffect(() => {
@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
                 setloading(false)
             });
     }, []);
-    return (loading ? <Loading /> : <ItemDetail {...detail} />
+    return (loading ? <Loading /> : <ItemDetail {...detail} product={detail} />
     )
 
 }

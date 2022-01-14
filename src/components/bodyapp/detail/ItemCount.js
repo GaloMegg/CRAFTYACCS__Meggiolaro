@@ -28,7 +28,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <p className="product__card--text" >{counter}</p>
                 <button className="product__card--btn" onClick={IncreaseQuantity}> +</button>
             </div>
-            <button className="product__card--btn-confirm" onClick={ConfirmQuantity}  >Confirm</button>
+            <button className="product__card--btn-confirm" onClick={ConfirmQuantity}>Confirm</button>
         </div>
     )
 }
