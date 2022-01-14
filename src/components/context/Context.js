@@ -9,7 +9,6 @@ const Context = ({ children }) => {
         {
             cart: [],
         })
-
     function Reducer(state, action) {
         switch (action.type) {
             case "AddCart":
@@ -30,8 +29,6 @@ const Context = ({ children }) => {
                 }
         }
     }
-
-
     function AddQuantity(q) {
         setQuantity(quantity + q)
     }
@@ -47,7 +44,6 @@ const Context = ({ children }) => {
             dispatch({ type: "IncrementQuantity", payload: { newQuantity: newQuantity } })
         }
     }
-
     function DeleteItem(id) {
         console.log(id)
         let newArray = [...state.cart]
@@ -55,10 +51,7 @@ const Context = ({ children }) => {
         console.log(newCleanArray)
         if (newCleanArray.length == 0) { EmptyCart() }
         else { dispatch({ type: "DeleteItem", payload: { newCleanArray: [...newCleanArray] } }) }
-
     }
-
-
     function TotalPricing(price, q) {
         setTotalPrice(Math.floor(totalPrice + (price * q)))
     }
@@ -67,20 +60,12 @@ const Context = ({ children }) => {
         setQuantity(0)
         dispatch({ type: "EmptyCart", payload: { cart: [] } })
     }
-
     const contextVariables = {
         quantity,
         totalPrice,
         state: state.cart
     }
-
-
-
     const fullContext = { contextVariables, AddQuantity, PushCart, TotalPricing, EmptyCart, DeleteItem }
-
-
-
-
     return (
         <Provider value={fullContext}>
             {children}
