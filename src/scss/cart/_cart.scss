@@ -1,7 +1,23 @@
-.cartFlex{
-    width: 100%;
+@use "../variables" as v;
+@import "../mixin.scss";
+.cartFlex {
+  min-height: 80vh;
+  background-color: v.$landingDark;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .cart__title {
+    color: v.$white;
+    font-family: v.$fontFamily;
+  }
+  .cart__buttons-flex {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    width: 90%;
+    justify-content: center;
+    .cart__buttons-try {
+      @include btn;
+    }
+  }
 }

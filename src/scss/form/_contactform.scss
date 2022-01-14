@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@import "../mixin.scss";
 .contactForm {
   min-height: 60vh;
   padding: 10%;
@@ -13,15 +14,7 @@
     width: 100%;
     justify-content: center;
     .contactForm__try-button {
-      width: 40%;
-      height: 6vh;
-      border-radius: 16px;
-      border: 0.02px solid black;
-      background-color: v.$lightPink;
-      margin: 1%;
-      &:hover {
-        transform: scale3d(1.01, 1.01, 1.01);
-      }
+      @include btn;
     }
   }
 }
