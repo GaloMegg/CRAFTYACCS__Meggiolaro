@@ -1,3 +1,4 @@
+import { memo } from "react"
 import landingA from "./images/craftylandinga.jpg"
 import landingB from "./images/craftylandingb.jpg"
 const Landing = () => {
@@ -8,4 +9,4 @@ const Landing = () => {
         </article>
     )
 }
-export default Landing
+export default memo(Landing)

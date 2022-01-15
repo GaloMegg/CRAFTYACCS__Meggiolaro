@@ -5,6 +5,7 @@ import ItemDetailContainer from "./detail/ItemDetailContainer"
 import ItemListContainer from "./items/ItemListContainer"
 import Landing from "./landing/Landing"
 import Whoweare from "./whoweare/Whoweare"
+import { memo } from "react"
 
 const Bodyapp = () => {
     return (

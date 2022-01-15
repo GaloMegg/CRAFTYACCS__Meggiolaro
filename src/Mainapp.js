@@ -7,17 +7,19 @@ import Context from "./components/context/Context";
 
 function MainApp() {
     return (
-        <Context>
+        <>
             <main className="mainDisplay">
-                <CartWidget />
                 <div className="flexNav">
                     <Header />
                     <Nav />
                 </div>
-                <Bodyapp />
+                <Context>
+                    <CartWidget />
+                    <Bodyapp />
+                </Context>
                 <Footer />
             </main>
-        </Context>
+        </>
     );
 }
 export default MainApp;
