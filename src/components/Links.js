@@ -1,3 +1,4 @@
+import { memo } from "react"
 import { Link } from "react-router-dom"
 export const linkArr = [
     {
@@ -28,4 +29,4 @@ const Links = ({ linkName, linkClass, route }) => {
         </>
     )
 }
-export default Links
+export default memo(Links)

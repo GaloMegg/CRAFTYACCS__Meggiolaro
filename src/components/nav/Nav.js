@@ -9,4 +9,4 @@ const Nav = () => {
         </nav>
     )
 }
-export default memo(Nav)
+export default Nav
