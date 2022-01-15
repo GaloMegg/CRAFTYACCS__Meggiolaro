@@ -10,7 +10,9 @@
 
 @mixin btn($width: 40%, $color: v.$lightPink, $height: 6vh, $fSize: 1.1rem) {
   text-align: center;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: $width;
   height: $height;
   border-radius: 16px;

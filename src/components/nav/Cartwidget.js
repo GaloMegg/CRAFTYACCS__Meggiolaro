@@ -8,9 +8,9 @@ const Cartwidget = () => {
     const { quantity } = contextVariables
     return (
         <article className="cartwidgetFlex">
-            <img src={cartImg} alt="" className="cartImg" />
-            <Link to={"/cart"}>
-                <p>{quantity}</p>
+            <Link to={"/cart"} className="cartwidgetLink">
+                <img src={cartImg} alt="" className="cartImg" />
+                <p className="cartQ">{quantity}</p>
             </Link>
         </article>
     )

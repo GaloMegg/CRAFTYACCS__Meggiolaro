@@ -13,7 +13,7 @@ const Item = ({ image, title, price, id, cartQ, renderLink, idDelete }) => {
             <p>{title}</p>
             <p>$ {price}</p>
             {cartQ && <p>{cartQ}</p>}
-            {idDelete && <button onClick={HandlerDelete}>Borrar</button>}
+            {idDelete && <button className="buttonCart" onClick={HandlerDelete}>Borrar</button>}
             {renderLink && <Link to={`/prod/product/${id}`} className="product__card--btn-more">Ver Mas</Link>}
         </div >
     )

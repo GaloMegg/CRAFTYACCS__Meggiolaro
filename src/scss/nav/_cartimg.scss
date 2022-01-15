@@ -8,11 +8,17 @@
   z-index: 9;
   background-color: white;
   margin: 13vh 0% 0% 89%;
-  width: 8%;
+  width: 9%;
   height: 5vh;
-  border-radius: 16%;
-  .cartImg {
-    height: 3vh;
-    padding: 0% 0.5% 0% 0.5%;
+  border-radius: 16px;
+  .cartwidgetLink {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    .cartImg {
+      height: 3vh;
+      padding: 0% 0.5% 0% 0.5%;
+    }
   }
 }

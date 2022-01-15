@@ -1,5 +1,5 @@
 @use "../variables" as v;
-
+@import "../mixin.scss";
 .products--flex {
   min-height: 80vh;
   width: 100%;
@@ -21,6 +21,9 @@
     .product__card--img {
       max-width: 100%;
       border-radius: 16px;
+    }
+    .buttonCart {
+      @include btn(50%, white);
     }
   }
 }
