@@ -1,4 +1,4 @@
-import { useReducer } from "react"
+import { useCallback, useReducer } from "react"
 import validator from 'validator';
 import Contact from "./Contact"
 const ContactContainer = () => {
@@ -33,7 +33,8 @@ const ContactContainer = () => {
                 return { ...state, buttonAllowed: false };
         }
     }
-    function ValidationName(e) {
+
+    const ValidationName = useCallback((e) => {
         let validation = validator.isAlpha(e.target.value)
         if (!validation) {
             dispatch("userNameNotOk")
@@ -43,8 +44,8 @@ const ContactContainer = () => {
             dispatch("userNameOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-    }
-    function ValidationSurname(e) {
+    }, [state.userName])
+    const ValidationSurname = useCallback((e) => {
         let validation = validator.isAlpha(e.target.value)
         if (!validation) {
             dispatch("userSurnameNotOk")
@@ -54,8 +55,8 @@ const ContactContainer = () => {
             dispatch("userSurnameOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-    }
-    function ValidationPhone(e) {
+    }, [state.userSurname])
+    const ValidationPhone = useCallback((e) => {
         let validation = validator.isNumeric(e.target.value)
         if (!validation) {
             dispatch("userPhoneNotOk")
@@ -65,8 +66,8 @@ const ContactContainer = () => {
             dispatch("userPhoneOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-    }
-    function ValidationEmail(e) {
+    }, [state.userPhone])
+    const ValidationEmail = useCallback((e) => {
         let validation = validator.isEmail(e.target.value)
         if (!validation) {
             dispatch("userEmailNotOk")
@@ -76,7 +77,7 @@ const ContactContainer = () => {
             dispatch("userEmailOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
-    }
+    }, [state.userEmail])
     return (
         <section>
             <Contact ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail}   {...state} />
