@@ -1,3 +1,4 @@
+import { memo } from "react";
 import LoadingIcon from "./images/loading.png";
 const Loading = () => {
     return (
@@ -6,4 +7,4 @@ const Loading = () => {
         </div>
     )
 }
-export default Loading
+export default memo(Loading)

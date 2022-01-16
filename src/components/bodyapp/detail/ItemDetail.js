@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { firstcontext } from "../../context/Context"
 import ItemCount from "./ItemCount"
 
