@@ -61,7 +61,7 @@ const ContactContainer = () => {
             dispatch("userPhoneNotOk")
             dispatch("buttonNotAllowed")
         }
-        else { 26c60af3b2458fe03cdde417001dabd897ae364d 
+        else {
             dispatch("userPhoneOk")
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
