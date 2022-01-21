@@ -13,13 +13,15 @@
     align-items: center;
     justify-content: space-around;
     margin: 1%;
-    padding: 4%;
-    max-width: 125px;
+    padding: 1%;
+    height: 60vh;
+    max-width: 155px;
     background-color: v.$white;
     text-align: center;
     border-radius: 16px;
     .product__card--img {
-      max-width: 100%;
+      height: 70%;
+      width: 100%;
       border-radius: 16px;
     }
     .buttonCart {
