@@ -14,38 +14,30 @@ const ItemListContainer = () => {
         if (categ) {
             const collec = collection(dataBase, "products")
             const filter = where("category", "==", categ)
-            const querySel = query(collec, filter)
-            const allProdProm = getDocs(querySel)
-            allProdProm.then((res) => {
-                const prods = res.docs
-                const finalProduct = prods.map((e) => {
-                    return {
-                        ...e.data(),
-                        idb: e.id
-                    }
-                })
-                setproducts(finalProduct)
-                setloading(false)
-            })
-        } else {
-            const allReq = collection(dataBase, "products")
-            const allProdProm = getDocs(allReq)
-            allProdProm.then((res) => {
-                const prods = res.docs
-                const finalProduct = prods.map((e) => {
-                    return {
-                        ...e.data(),
-                        idb: e.id
-                    }
-                })
-                setproducts(finalProduct)
-                setloading(false)
-            })
+            const allReq = query(collec, filter)
+            setCategories(allReq)
         }
-
-
-
+        else {
+            const allReq = collection(dataBase, "products")
+            setCategories(allReq)
+        }
     }, [categ]);
+
+    const setCategories = (allReq) => {
+        const allProdProm = getDocs(allReq)
+        allProdProm.then((res) => {
+            const prods = res.docs
+            const finalProduct = prods.map((e) => {
+                return {
+                    ...e.data(),
+                    idb: e.id
+                }
+            })
+            setproducts(finalProduct)
+            setloading(false)
+        })
+    }
+
     return (loading ? <Loading /> : <ItemList data={products} />
     )
 }

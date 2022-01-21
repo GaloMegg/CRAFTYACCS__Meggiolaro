@@ -45,10 +45,8 @@ const Context = ({ children }) => {
         }
     }
     function DeleteItem(id) {
-        console.log(id)
         let newArray = [...state.cart]
         let newCleanArray = newArray.filter((element) => element.id != id)
-        console.log(newCleanArray)
         if (newCleanArray.length == 0) { EmptyCart() }
         else { dispatch({ type: "DeleteItem", payload: { newCleanArray: [...newCleanArray] } }) }
     }

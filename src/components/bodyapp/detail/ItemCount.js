@@ -1,4 +1,5 @@
 import { useState } from "react"
+
 const ItemCount = ({ stock, initial, onAdd }) => {
 
     //Item counter state
@@ -19,7 +20,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const ConfirmQuantity = () => {
         setcounter(1)
         onAdd(counter)
-
     }
     return (
         <div className="product__flex">
