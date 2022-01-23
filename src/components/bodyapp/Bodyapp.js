@@ -5,7 +5,7 @@ import ItemDetailContainer from "./detail/ItemDetailContainer"
 import ItemListContainer from "./items/ItemListContainer"
 import Landing from "./landing/Landing"
 import Whoweare from "./whoweare/Whoweare"
-import { memo } from "react"
+import Checkoutcontainer from "./cart/Checkoutcontainer"
 
 const Bodyapp = () => {
     return (
@@ -17,6 +17,7 @@ const Bodyapp = () => {
             <Route path="/contact/" element={<ContactContainer />} />
             <Route path="/whoweare/" element={<Whoweare />} />
             <Route path="/cart/" element={<Cart />} />
+            <Route path="/checkout/" element={<Checkoutcontainer />} />
         </Routes>
     )
 }

@@ -1,10 +1,10 @@
 @use "variables" as v;
-@mixin links($color: white, $fsize: 0.8rem) {
-  color: v.$darkerBlack;
+@mixin links($color: v.$landingDark, $colorHover: white, $fsize: 0.8rem) {
+  color: $color;
   font-family: "Oswald", sans-serif;
   font-size: $fsize;
   &:hover {
-    color: $color;
+    color: $colorHover;
   }
 }
 

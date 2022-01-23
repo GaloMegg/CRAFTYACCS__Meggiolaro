@@ -1,5 +1,6 @@
 @use "../variables" as v;
 @import "../mixin.scss";
+
 .cartFlex {
   min-height: 80vh;
   background-color: v.$landingDark;
@@ -18,6 +19,12 @@
     justify-content: center;
     .cart__buttons-try {
       @include btn;
+      button {
+        border: none;
+      }
     }
+  }
+  .cart__links {
+    @include links(v.$white, white, 1.1rem);
   }
 }

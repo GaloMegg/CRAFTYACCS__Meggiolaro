@@ -1,0 +1,34 @@
+@use "../variables" as v;
+.idCopy {
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: v.$fontFamily;
+  .idCopy__advice {
+    font-size: 1rem;
+    padding: 2%;
+  }
+  .idCopy__numberFlex {
+    text-align: center;
+    .idCopy__copyFlex {
+      background-color: v.$darkPink;
+      margin: 2%;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .idCopy__copy--button {
+        width: 8%;
+        margin: 2%;
+        background-color: v.$darkPink;
+        border: none;
+      }
+      .idCopy__copy--img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { firstcontext } from "../../context/Context"
 import Item from "../items/Item"
 const FullCart = () => {
@@ -13,7 +14,7 @@ const FullCart = () => {
             <p className="cart__title">El total es de $ {totalPrice}</p>
             <div className="cart__buttons-flex">
                 <button className="cart__buttons-try" onClick={Emptycart}>Limpiar</button>
-                <button className="cart__buttons-try">Finalizar</button>
+                <Link to="/checkout/" className="cart__buttons-try"><button className="cart__buttons-try">Finalizar</button></Link>
             </div>
             <div className="products--flex ">
                 {state.map((e) => {
