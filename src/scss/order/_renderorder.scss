@@ -1,6 +1,7 @@
 @use "../variables" as v;
 
 .orderStatus__flex {
+  margin: 2%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,5 +12,17 @@
   background-color: v.$landingDark;
   .orderStatus__text {
     color: v.$white;
+  }
+  .orderStatus__client {
+    width: 99%;
+    border: 1px solid white;
+    display: flex;
+    min-height: 20vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .orderStatus__client--text {
+      color: white;
+    }
   }
 }

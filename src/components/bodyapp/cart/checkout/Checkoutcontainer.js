@@ -5,6 +5,7 @@ import { dataBase } from "../../../../firebase/Firebase"
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react/cjs/react.development";
 import IdCopy from "../IdCopy";
+import { Navigate } from "react-router-dom";
 
 const Checkoutcontainer = () => {
 
@@ -16,13 +17,18 @@ const Checkoutcontainer = () => {
         const docAdded = addDoc(collect, doctoAdd)
         docAdded.then((res) => {
             setId(res.id)
+            EmptyCart()
         })
     }
 
-
-    return (
-        id ? <IdCopy id={id} /> : <Checkout {...contextVariables} pushOrder={pushOrder} EmptyCart={EmptyCart} />
-    );
+    if (id === "" && contextVariables.totalPrice === 0) {
+        return (<Navigate to="/" />)
+    }
+    else {
+        return (<>
+            {id ? <IdCopy id={id} /> : <Checkout {...contextVariables} pushOrder={pushOrder} EmptyCart={EmptyCart} />}
+        </>);
+    }
 };
 
 export default Checkoutcontainer;
