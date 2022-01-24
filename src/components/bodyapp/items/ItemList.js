@@ -4,9 +4,9 @@ const ItemList = ({ data }) => {
     return (
         <>
             <div>
-                <Categories/>
+                <Categories />
                 <div className="products--flex" >
-                    {data.map((product) => { return (<Item key={product.id} {...product} stock={10} renderLink={true}/>) })}
+                    {data.map((product) => { return (<Item key={product.id} {...product} stock={10} renderLink={true} />) })}
                 </div>
             </div>
         </>

@@ -7,7 +7,7 @@ import Loading from '../items/Loading';
 const Ordercontainer = () => {
     const [orderNum, setOrderNum] = useState(0);
     const [loading, setLoading] = useState(null);
-    const [orderStatus, setOrderStatus] = useState({});
+    const [orderStatus, setOrderStatus] = useState(0);
     const CheckOrder = (e) => {
         const value = e.target.value
         setOrderNum(value.trim())
@@ -29,7 +29,8 @@ const Ordercontainer = () => {
             <p className='order__text'>Ingresa tu numero de orden aqui </p>
             <input type="text" required onChange={CheckOrder} className='order__inputCheck' />
             <button onClick={orderStatusReq} className='order__buttonCheck'>Check</button>
-            {loading ? <Loading lessWidth={true} /> : <Renderorder totalPrice={orderStatus["1"]} products={orderStatus["0"]} client={orderStatus["2"]} />}
+            {loading && <Loading lessWidth={true} />}
+            {orderStatus && <Renderorder totalPrice={orderStatus["1"]} products={orderStatus["0"]} client={orderStatus["2"]} />}
         </div>
     );
 };

@@ -21,7 +21,7 @@ export const linkArr = [
 ]
 
 const Links = ({ linkName, linkClass, route }) => {
-    
+
     return (
         <>
             <Link to={`/${route}/`} path="" className={linkClass}>{linkName}</Link>
