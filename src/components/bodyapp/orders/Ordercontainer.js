@@ -1,10 +1,10 @@
 import { collection, getDoc, doc } from 'firebase/firestore';
 import React, { useState } from 'react';
 import { dataBase } from '../../../firebase/Firebase';
-import Renderorder from './Renderorder';
+import RenderOrder from './RenderOrder';
 import Loading from '../items/Loading';
 
-const Ordercontainer = () => {
+const OrderContainer = () => {
     const [orderNum, setOrderNum] = useState(0);
     const [loading, setLoading] = useState(null);
     const [orderStatus, setOrderStatus] = useState(0);
@@ -30,9 +30,9 @@ const Ordercontainer = () => {
             <input type="text" required onChange={CheckOrder} className='order__inputCheck' />
             <button onClick={orderStatusReq} className='order__buttonCheck'>Check</button>
             {loading && <Loading lessWidth={true} />}
-            {orderStatus && <Renderorder totalPrice={orderStatus["1"]} products={orderStatus["0"]} client={orderStatus["2"]} />}
+            {orderStatus && <RenderOrder totalPrice={orderStatus["1"]} products={orderStatus["0"]} client={orderStatus["2"]} />}
         </div>
     );
 };
 
-export default Ordercontainer;
+export default OrderContainer;

@@ -1,5 +1,5 @@
 
-const Orderitem = ({ products }) => {
+const OrderItem = ({ products }) => {
     return (
         <section className="orderItem__flex">
             <div className="tableheader__flex">
@@ -23,4 +23,4 @@ const Orderitem = ({ products }) => {
     );
 };
 
-export default Orderitem;
+export default OrderItem;

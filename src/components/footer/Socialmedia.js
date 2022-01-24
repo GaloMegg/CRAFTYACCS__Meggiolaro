@@ -1,4 +1,4 @@
-const Socialmedia = () => {
+const SocialMedia = () => {
     return (
         <div className="socialmedia">
             <p className="socialmedia-p" alt="nuestras redes">Nuestras redes:</p>
@@ -10,4 +10,4 @@ const Socialmedia = () => {
         </div>
     )
 }
-export default Socialmedia
+export default SocialMedia

@@ -163,10 +163,8 @@ const CheckoutFormContainer = ({ confirmOrder }) => {
         if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
     }
     function ConfirmData() {
-        if (!(orderData.userEmail == "")) { confirmOrder(orderData) }
-        else {
-            console.log("rellena loscampos")
-        }
+        confirmOrder(orderData)
+
     }
     return (
         <div className="checkoutForm--flex">

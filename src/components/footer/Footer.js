@@ -1,5 +1,5 @@
 import Links from "../Links"
-import Socialmedia from "./Socialmedia"
+import SocialMedia from "./SocialMedia"
 const Footer = () => {
     const linkArr = [
         {
@@ -27,7 +27,7 @@ const Footer = () => {
                 {linkArr.map((link) => { return (<Links key={link.id} {...link} />) })}
             </div>
             <div className="footer__socialMediaFlex">
-                <Socialmedia />
+                <SocialMedia />
             </div>
         </footer>
     )

@@ -1,11 +1,11 @@
-import Orderitem from "./Orderitem";
+import OrderItem from "./OrderItem";
 
-const Renderorder = ({ totalPrice, products, client }) => {
+const RenderOrder = ({ totalPrice, products, client }) => {
 
     return (
         <div className="orderStatus__flex">
             {products && <p className="orderStatus__text">Total: {totalPrice}</p>}
-            {products && <Orderitem products={products} />}
+            {products && <OrderItem products={products} />}
             {client && <div className="orderStatus__client">
                 <p className="orderStatus__client--text">
                     Nombre:    {client.userName}
@@ -23,4 +23,4 @@ const Renderorder = ({ totalPrice, products, client }) => {
         </div>);
 };
 
-export default Renderorder;
+export default RenderOrder;

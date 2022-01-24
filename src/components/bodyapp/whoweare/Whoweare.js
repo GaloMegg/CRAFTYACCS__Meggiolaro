@@ -1,5 +1,5 @@
 import whoWeAreImage from "./images/craftyaccslogo.png"
-const Whoweare = () => {
+const WhoWeAre = () => {
     return (
 
         <section className="whoweare">
@@ -14,4 +14,4 @@ const Whoweare = () => {
         </section>
     )
 }
-export default Whoweare
+export default WhoWeAre

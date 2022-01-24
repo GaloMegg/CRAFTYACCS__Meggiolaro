@@ -4,11 +4,11 @@ import ContactContainer from "./contact/ContactContainer"
 import ItemDetailContainer from "./detail/ItemDetailContainer"
 import ItemListContainer from "./items/ItemListContainer"
 import Landing from "./landing/Landing"
-import Whoweare from "./whoweare/Whoweare"
-import Ordercontainer from "./orders/Ordercontainer"
-import Checkoutcontainer from "./cart/checkout/Checkoutcontainer"
+import WhoWeAre from "./whoweare/WhoWeAre"
+import OrderContainer from "./orders/OrderContainer"
+import Checkoutcontainer from "./cart/checkout/CheckoutContainer"
 
-const Bodyapp = () => {
+const BodyApp = () => {
     return (
         <Routes>
             <Route path="/" element={<Landing />} />
@@ -16,12 +16,12 @@ const Bodyapp = () => {
             <Route path="/prod/cat/:categ" element={<ItemListContainer />} />
             <Route path="/prod/product/:id" element={<ItemDetailContainer />} />
             <Route path="/contact/" element={<ContactContainer />} />
-            <Route path="/whoweare/" element={<Whoweare />} />
+            <Route path="/whoweare/" element={<WhoWeAre />} />
             <Route path="/cart/" element={<Cart />} />
             <Route path="/checkout/" element={<Checkoutcontainer />} />
-            <Route path="/ordersearch/" element={<Ordercontainer />} />
+            <Route path="/ordersearch/" element={<OrderContainer />} />
         </Routes>
     )
 }
 
-export default Bodyapp
+export default BodyApp
