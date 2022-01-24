@@ -5,8 +5,8 @@ import ItemDetailContainer from "./detail/ItemDetailContainer"
 import ItemListContainer from "./items/ItemListContainer"
 import Landing from "./landing/Landing"
 import Whoweare from "./whoweare/Whoweare"
-import Checkoutcontainer from "./cart/Checkoutcontainer"
 import Ordercontainer from "./orders/Ordercontainer"
+import Checkoutcontainer from "./cart/checkout/Checkoutcontainer"
 
 const Bodyapp = () => {
     return (

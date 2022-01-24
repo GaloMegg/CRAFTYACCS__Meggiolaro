@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { firstcontext } from "../../context/Context";
+import { firstcontext } from "../../../context/Context";
 import Checkout from "./Checkout";
-import { dataBase } from "../../../firebase/Firebase"
+import { dataBase } from "../../../../firebase/Firebase"
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react/cjs/react.development";
-import IdCopy from "./IdCopy";
+import IdCopy from "../IdCopy";
 
 const Checkoutcontainer = () => {
 

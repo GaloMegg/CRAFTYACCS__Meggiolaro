@@ -1,0 +1,31 @@
+.checkoutOrderFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 80vh;
+  .checkOut__table {
+    width: 80%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & > p {
+      text-align: center;
+      width: 30%;
+    }
+  }
+  .checkoutForm--flex {
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .checkoutForm {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

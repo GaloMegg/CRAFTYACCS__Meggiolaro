@@ -1,15 +1,12 @@
 import { useReducer } from "react"
 import validator from 'validator';
 import Contact from "./Contact"
-const ContactContainer = ({ Checkout }) => {
+const ContactContainer = () => {
     const [state, dispatch] = useReducer(Reducer, {
         "userName": true,
         "userSurname": true,
         "userPhone": true,
         "userEmail": true,
-        "userZip": true,
-        "userDNI": true,
-        "userAddress": true,
         "buttonAllowed": false
     })
     function Reducer(state, action) {
@@ -26,18 +23,6 @@ const ContactContainer = ({ Checkout }) => {
                 return { ...state, userPhone: true };
             case "userPhoneNotOk":
                 return { ...state, userPhone: false };
-            case "userZipOk":
-                return { ...state, userZip: true };
-            case "userZipNotOk":
-                return { ...state, userZip: false };
-            case "userDNIOk":
-                return { ...state, userDNI: true };
-            case "userDNINotOk":
-                return { ...state, userDNI: false };
-            case "userAddressOk":
-                return { ...state, userAddress: true };
-            case "userAddressNotOk":
-                return { ...state, userAddress: false };
             case "userEmailOk":
                 return { ...state, userEmail: true };
             case "userEmailNotOk":
@@ -85,29 +70,6 @@ const ContactContainer = ({ Checkout }) => {
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
     }
-    function ValidationZip(e) {
-        let validation = validator.isPostalCode(e.target.value, "any")
-        if (!validation) {
-            dispatch("userZipNotOk")
-            dispatch("buttonNotAllowed")
-        }
-        else {
-            dispatch("userZipOk")
-            if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
-        }
-    }
-    function ValidationDni(e) {
-        let validation = validator.isNumeric(e.target.value)
-        if (!validation) {
-            dispatch("userDNINotOk")
-            dispatch("buttonNotAllowed")
-        }
-        else {
-            dispatch("userDNIOk")
-            if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
-
-        }
-    }
     function ValidationEmail(e) {
         let validation = validator.isEmail(e.target.value)
         if (!validation) {
@@ -121,7 +83,7 @@ const ContactContainer = ({ Checkout }) => {
     }
     return (
         <section>
-            <Contact ValidationName={ValidationName} checkout={Checkout} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail} ValidationZip={ValidationZip} ValidationDni={ValidationDni} {...state} />
+            <Contact ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail} {...state} />
         </section>
     )
 }

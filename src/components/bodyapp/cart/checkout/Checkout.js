@@ -1,24 +1,25 @@
-import ContactContainer from "../contact/ContactContainer";
+import CheckoutFormContainer from "./CheckoutFormContainer";
 
 const Checkout = ({ state, pushOrder, EmptyCart, totalPrice }) => {
-    const confirmOrder = () => {
+    const confirmOrder = (data) => {
         const orders = state.map((e) => { return { ...e } })
-        pushOrder([orders, totalPrice])
+        pushOrder([orders, totalPrice, data])
         EmptyCart()
     }
 
     return (
-        <div>
+        <div className="checkoutOrderFlex">
             <p>Compra</p>
+            <p>Total: $ {totalPrice}</p>
             {state.map((e) => {
                 return (
                     <div key={e.id} className="checkOut__table">
                         <p>{e.title}</p>
                         <p>{e.quantity}</p>
+                        <p>{e.price}</p>
                     </div>)
             })}
-            <ContactContainer Checkout={true} />
-            <button onClick={confirmOrder}>Comfirnasfa</button>
+            <CheckoutFormContainer confirmOrder={confirmOrder} />
         </div >
     );
 };
