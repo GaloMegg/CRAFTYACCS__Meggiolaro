@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { firstcontext } from "../../context/Context"
 const Item = ({ image, title, price, idb, cartQ, renderLink, idDelete }) => {
     const { DeleteItem } = useContext(firstcontext)
-    const OnAdd = () => { }
     function HandlerDelete() {
         DeleteItem(idDelete)
     }

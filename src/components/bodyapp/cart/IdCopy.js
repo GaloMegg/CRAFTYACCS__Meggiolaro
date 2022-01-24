@@ -1,6 +1,7 @@
 import React from 'react';
 import Copy from "./images/copy.png"
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const IdCopy = ({ id }) => {
 
@@ -19,6 +20,7 @@ const IdCopy = ({ id }) => {
                 </div>
             </section>
             <p className=''>¡Copialo y guarlado en un lugar seguro!</p>
+            <Link to="/ordersearch/" className="cart__links">Consulta tu pedido</Link>
         </div>
     );
 };

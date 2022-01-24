@@ -1,7 +1,7 @@
 import { useReducer } from "react"
 import validator from 'validator';
 import Contact from "./Contact"
-const ContactContainer = ({ Checkout}) => {
+const ContactContainer = ({ Checkout }) => {
     const [state, dispatch] = useReducer(Reducer, {
         "userName": true,
         "userSurname": true,
@@ -46,6 +46,10 @@ const ContactContainer = ({ Checkout}) => {
                 return { ...state, buttonAllowed: true };
             case "buttonNotAllowed":
                 return { ...state, buttonAllowed: false };
+            default:
+                return {
+                    ...state
+                }
         }
     }
     function ValidationName(e) {

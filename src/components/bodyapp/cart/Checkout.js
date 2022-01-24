@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { firstcontext } from "../../context/Context";
 import ContactContainer from "../contact/ContactContainer";
 
-const Checkout = ({ state, pushOrder, EmptyCart }) => {
-    const confirmorder = () => {
+const Checkout = ({ state, pushOrder, EmptyCart, totalPrice }) => {
+    const confirmOrder = () => {
+        const orders = state.map((e) => { return { ...e } })
+        pushOrder([orders, totalPrice])
         EmptyCart()
-        pushOrder([...state])
     }
 
     return (
@@ -19,7 +18,7 @@ const Checkout = ({ state, pushOrder, EmptyCart }) => {
                     </div>)
             })}
             <ContactContainer Checkout={true} />
-            <button onClick={confirmorder}>Comfirnasfa</button>
+            <button onClick={confirmOrder}>Comfirnasfa</button>
         </div >
     );
 };

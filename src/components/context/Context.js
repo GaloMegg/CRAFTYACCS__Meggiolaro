@@ -27,6 +27,11 @@ const Context = ({ children }) => {
                 return {
                     cart: action.payload.cart
                 }
+
+            default:
+                return {
+                    ...state
+                }
         }
     }
     function AddQuantity(q) {
@@ -34,7 +39,7 @@ const Context = ({ children }) => {
     }
     function PushCart(product, q) {
         let exist = state.cart.findIndex((element) => element.id === product.id)
-        if (exist == -1) {
+        if (exist === -1) {
             product.quantity = q
             dispatch({ type: "AddCart", payload: { product: { ...product } } })
         }
@@ -46,8 +51,8 @@ const Context = ({ children }) => {
     }
     function DeleteItem(id) {
         let newArray = [...state.cart]
-        let newCleanArray = newArray.filter((element) => element.id != id)
-        if (newCleanArray.length == 0) { EmptyCart() }
+        let newCleanArray = newArray.filter((element) => element.id !== id)
+        if (newCleanArray.length === 0) { EmptyCart() }
         else { dispatch({ type: "DeleteItem", payload: { newCleanArray: [...newCleanArray] } }) }
     }
     function TotalPricing(price, q) {

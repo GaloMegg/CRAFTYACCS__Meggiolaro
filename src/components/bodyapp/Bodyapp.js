@@ -6,6 +6,7 @@ import ItemListContainer from "./items/ItemListContainer"
 import Landing from "./landing/Landing"
 import Whoweare from "./whoweare/Whoweare"
 import Checkoutcontainer from "./cart/Checkoutcontainer"
+import Ordercontainer from "./orders/Ordercontainer"
 
 const Bodyapp = () => {
     return (
@@ -18,6 +19,7 @@ const Bodyapp = () => {
             <Route path="/whoweare/" element={<Whoweare />} />
             <Route path="/cart/" element={<Cart />} />
             <Route path="/checkout/" element={<Checkoutcontainer />} />
+            <Route path="/ordersearch/" element={<Ordercontainer />} />
         </Routes>
     )
 }

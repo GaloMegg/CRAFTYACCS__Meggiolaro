@@ -1,4 +1,3 @@
-import { useCallback } from "react"
 import Links from "../Links"
 import { linkArr } from "../Links"
 const Nav = () => {

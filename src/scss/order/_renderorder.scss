@@ -1,0 +1,15 @@
+@use "../variables" as v;
+
+.orderStatus__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  min-height: 60vh;
+  width: 99%;
+  background-color: v.$landingDark;
+  .orderStatus__text {
+    color: v.$white;
+  }
+}

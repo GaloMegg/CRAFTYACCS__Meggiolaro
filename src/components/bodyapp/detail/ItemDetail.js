@@ -10,7 +10,7 @@ const ItemDetail = ({ image, title, description, price, product, id }) => {
         AddQuantity(counter)
         PushCart(product, counter)
         TotalPricing(price, counter)
-        if (counter == 1) {
+        if (counter === 1) {
             toast.success("Producto agregado.", {
                 className: 'foo-bar'
             })

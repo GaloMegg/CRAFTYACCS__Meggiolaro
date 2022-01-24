@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail"
-import Loading from "../items/loading";
+import Loading from "../items/Loading";
 import { useParams } from "react-router-dom";
 import { dataBase } from "../../../firebase/Firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
             setloading(false)
         })
             .catch((err) => console.error(err))
-    }, []);
+    }, [id]);
     return (loading ? <Loading /> : <ItemDetail {...detail} product={detail} />
     )
 

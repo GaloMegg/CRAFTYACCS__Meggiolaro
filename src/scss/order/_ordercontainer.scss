@@ -1,0 +1,34 @@
+@use "../variables" as v;
+@import "../mixin.scss";
+
+.order__flex {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: v.$landingDark;
+  .order__text {
+    color: v.$white;
+  }
+  .order__buttonCheck {
+    @include btn;
+  }
+  .order__inputCheck {
+    border-radius: 16px;
+    height: 6vh;
+    width: 90%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: v.$fontFamily;
+  }
+  .order__flex-loading {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loadingFrame--try {
+      width: 10%;
+    }
+  }
+}

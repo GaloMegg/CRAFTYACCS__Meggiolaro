@@ -68,6 +68,7 @@ acronym {
 a {
   text-decoration: none;
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 @import "variables";
 @import "mixin";
@@ -83,7 +84,9 @@ a {
 @import "landing/landingb";
 @import "cart/cart";
 @import "cart/idcopy";
-
+@import "order/ordercontainer";
+@import "order/renderorder";
+@import "order/orderitem";
 @import "products/product";
 @import "products/categories";
 @import "whoweare/whoweare";

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList"
-import Loading from "./loading";
+import Loading from "./Loading";
 import { dataBase } from "../../../firebase/Firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
