@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-
 import { linkArr } from "../../Links"
 const EmptyCart = () => {
     const [product, ,] = linkArr
@@ -13,5 +12,4 @@ const EmptyCart = () => {
         </section >
     )
 }
-
 export default EmptyCart

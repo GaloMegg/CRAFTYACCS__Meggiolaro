@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { firstcontext } from "../../context/Context"
 import Item from "../items/Item"
 const FullCart = () => {
-
     const { contextVariables, EmptyCart } = useContext(firstcontext)
     const { totalPrice, state } = contextVariables
     function Emptycart() {

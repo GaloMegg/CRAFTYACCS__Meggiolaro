@@ -1,7 +1,6 @@
 import Copy from "./images/copy.png"
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
-
 const IdCopy = ({ id }) => {
     const handleClikcID = () => {
         navigator.clipboard.writeText(id)
@@ -22,5 +21,4 @@ const IdCopy = ({ id }) => {
         </div>
     );
 };
-
 export default IdCopy;

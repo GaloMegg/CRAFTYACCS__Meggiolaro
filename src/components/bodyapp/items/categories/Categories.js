@@ -10,22 +10,16 @@ const Categories = () => {
             "urlname": "Anillos",
             "urlParam": "ring",
             "id": 2
-
-
         },
         {
             "urlname": "Aros",
             "urlParam": "earring",
             "id": 3
-
-
         },
         {
             "urlname": "Collares",
             "urlParam": "necklace",
             "id": 4
-
-
         }
     ]
     return (

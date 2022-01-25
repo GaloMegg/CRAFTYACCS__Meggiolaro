@@ -4,8 +4,6 @@ import ItemList from "./ItemList"
 import Loading from "./Loading";
 import { dataBase } from "../../../firebase/Firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
-
-
 const ItemListContainer = () => {
     const [products, setproducts] = useState([])
     const [loading, setloading] = useState(true)

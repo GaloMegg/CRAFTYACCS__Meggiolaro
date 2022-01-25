@@ -1,7 +1,5 @@
 import OrderItem from "./OrderItem";
-
 const RenderOrder = ({ totalPrice, products, client }) => {
-
     return (
         <div className="orderStatus__flex">
             {products && <p className="orderStatus__text">Total: {totalPrice}</p>}

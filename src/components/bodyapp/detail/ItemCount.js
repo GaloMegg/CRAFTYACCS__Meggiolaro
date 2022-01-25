@@ -1,7 +1,5 @@
 import { useState } from "react"
-
 const ItemCount = ({ stock, initial, onAdd }) => {
-
     //Item counter state
     const [counter, setcounter] = useState(initial)
     //Handler funtion to increase the quantity of the item selected.

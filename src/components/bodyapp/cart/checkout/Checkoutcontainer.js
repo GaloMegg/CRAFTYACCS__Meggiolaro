@@ -6,9 +6,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react/cjs/react.development";
 import IdCopy from "../IdCopy";
 import { Navigate } from "react-router-dom";
-
 const Checkoutcontainer = () => {
-
     const { contextVariables, EmptyCart } = useContext(firstcontext)
     const [id, setId] = useState("");
     const pushOrder = (e) => {
@@ -20,7 +18,6 @@ const Checkoutcontainer = () => {
             EmptyCart()
         })
     }
-
     if (id === "" && contextVariables.totalPrice === 0) {
         return (<Navigate to="/" />)
     }
@@ -30,6 +27,5 @@ const Checkoutcontainer = () => {
         </>);
     }
 };
-
 export default Checkoutcontainer;
 

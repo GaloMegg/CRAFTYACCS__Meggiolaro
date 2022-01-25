@@ -1,5 +1,4 @@
 import CheckoutFormContainer from "./CheckoutFormContainer";
-
 const Checkout = ({ state, pushOrder, totalPrice }) => {
     const confirmOrder = (data) => {
         const orders = state.map((e) => { return { ...e } })
@@ -21,5 +20,4 @@ const Checkout = ({ state, pushOrder, totalPrice }) => {
         </div >
     );
 };
-
 export default Checkout;

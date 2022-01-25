@@ -1,4 +1,3 @@
-
 const OrderItem = ({ products }) => {
     return (
         <section className="orderItem__flex">
@@ -19,7 +18,6 @@ const OrderItem = ({ products }) => {
                 })
             }
         </section >
-
     );
 };
 

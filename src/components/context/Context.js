@@ -1,6 +1,4 @@
 import { createContext, useReducer, useState } from "react"
-
-
 const Context = ({ children }) => {
     const { Provider } = firstcontext;
     const [totalPrice, setTotalPrice] = useState(0)
@@ -27,7 +25,6 @@ const Context = ({ children }) => {
                 return {
                     cart: action.payload.cart
                 }
-
             default:
                 return {
                     ...state

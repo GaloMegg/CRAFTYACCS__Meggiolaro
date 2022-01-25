@@ -8,6 +8,7 @@ const OrderContainer = () => {
     const [orderNum, setOrderNum] = useState(0);
     const [loading, setLoading] = useState(null);
     const [orderStatus, setOrderStatus] = useState(0);
+    const [error, setError] = useState(null);
     const CheckOrder = (e) => {
         const value = e.target.value
         setOrderNum(value.trim())
@@ -22,6 +23,12 @@ const OrderContainer = () => {
             setOrderStatus(ord)
             setLoading(false)
         })
+        order.catch(
+            (err) => {
+                console.log(err)
+                setError(true)
+            }
+        )
     }
     return (
         <div className='order__flex'>
@@ -31,6 +38,7 @@ const OrderContainer = () => {
             <button onClick={orderStatusReq} className='order__buttonCheck'>Check</button>
             {loading && <Loading lessWidth={true} />}
             {orderStatus && <RenderOrder totalPrice={orderStatus["1"]} products={orderStatus["0"]} client={orderStatus["2"]} />}
+            {error || <p className='order__text'>No existe el numero, intente nuevamente.</p>}
         </div>
     );
 };

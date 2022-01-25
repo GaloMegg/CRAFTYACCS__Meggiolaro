@@ -1,7 +1,6 @@
 import whoWeAreImage from "./images/craftyaccslogo.png"
 const WhoWeAre = () => {
     return (
-
         <section className="whoweare">
             <div className="whoweare__flex-a">
                 <img src={whoWeAreImage} alt="" className="whoweare__flex-a--try" />

@@ -162,15 +162,16 @@ const CheckoutFormContainer = ({ confirmOrder }) => {
         })
         if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
     }
-    function ConfirmData() {
+    function ConfirmData(e) {
+        e.preventDefault()
         confirmOrder(orderData)
 
     }
     return (
-        <div className="checkoutForm--flex">
+        <form className="checkoutForm--flex checkoutForm" onSubmit={ConfirmData}>
             <CheckoutForm ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail} ValidationZip={ValidationZip} ValidationDni={ValidationDni} ValidationAddress={ValidationAddress} ConfirmData={ConfirmData} {...state} />
-            <button className="btn" onClick={ConfirmData} disabled={!state.buttonAllowed && true}>Confirmar</button>
-        </div>
+            <button className="btn" disabled={!state.buttonAllowed && true}>Confirmar</button>
+        </form>
     );
 };
 
