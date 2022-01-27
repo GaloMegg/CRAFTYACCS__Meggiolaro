@@ -1,30 +1,68 @@
+<details>
 <summary>
 
-## Proyecto
+## Proyecto 🖥️
 
 </summary>
-<details>
 
 <p>
+El proyecto es un e-commerce producto de un proyecto final de CODERHOUSE. 
+Se realizó con la estrategia de diseño "Mobile First".
+Se utilizaron tecnologías como:
 
-### Crafty Accesorios
+▫️ HTML5
+▫️ CSS
+▫️ Preprocessors (SASS)
+▫️ JavaScript
+▫️ React. JS
 
-_E-commerce de artesanías, producto de un proyecto final de la misma universidad_
+El proyecto fue inicializado con:
+🏷️ [Create-React-App](https://create-react-app.dev/docs/getting-started/)
+
+Los packages instalados son los siguientes:
+
+▫️ [React-tostify](https://www.npmjs.com/package/react-toastify)
+▫ [Validator](https://www.npmjs.com/package/validator)
+
+Para inicializar el proyecto en tu equipo local, debes clonarlo o hacerle un fork al repositorio.
+
+    git clone https://github.com/GaloMegg/CRAFTYACCS__Meggiolaro.git
+
+Una vez clonado, deberá moverse a la carpeta creada.
+
+    cd CRAFTYACCS__Meggiolaro
+
+Ya posicionado en la carpeta clonada, deberá correr el comando:
+
+    npm i
+
+Una vez instalados los módulos corra el siguiente comando
+
+    npm start
+
+Se abrirá un LocalHost en su navegador predeterminado.
+
+¡Y estás listo! 🚀
+
+#### Crafty Accesorios
+
 [@CraftyAccs](https://www.instagram.com/craftyaccs/)
 
 </p>
 
 </details>
+
+<details>
+
 <summary>
 
-## Alumno
+## Developer🔹
 
 </summary>
-<details>
 
 <p>
 
-### Galo Meggiolaro
+#### Galo Meggiolaro
 
 > "Front-end developer en eterno entrenamiento"
 
@@ -35,56 +73,18 @@ _E-commerce de artesanías, producto de un proyecto final de la misma universida
 
 </details>
 
-<summary>
+<details><summary>
 
-## Universidad
-
-</summary>
-
-<details>
-
-<p>
-
-### CODERHOUSE
-
-> _Democratizando la educación_ > [CODERHOUSE](https://www.coderhouse.com/)
-
-</p>
-
-</details>
-
-<summary>
-
-## Profesor
+## Universidad💮
 
 </summary>
 
-<details> profesor
-
 <p>
 
-### Horacio Gutierrez
+#### CODERHOUSE
 
-[GitHub](https://github.com/HoracioGutierrez)
-[Linked-In](https://www.linkedin.com/in/horacioegutierrez/)
-
-</p>
-
-</details>
-
-<summary>
-
-## Tutor
-
-</summary>
-
-<details>
-
-<p>
-
-### Patricio Pallua
-
-[Linked-In](https://www.linkedin.com/in/patricio-federico-pallua-pessagno/)
+> _Democratizando la educación_
+> [CODERHOUSE](https://www.coderhouse.com/)
 
 </p>
 

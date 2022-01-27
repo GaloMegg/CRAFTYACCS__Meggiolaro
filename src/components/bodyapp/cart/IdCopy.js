@@ -8,7 +8,7 @@ const IdCopy = ({ id }) => {
         toast.success("¡Su numero fue copiado con exito!")
     }
     return (
-        <div className='idCopy'>
+        <article className='idCopy'>
             <p className='idCopy__advice'>Tu orden ya fue creada, recibirás tu pedido dentro de 3 días <strong>hábiles</strong>...</p>
             <section className='idCopy__numberFlex'>
                 <p className='idCopy__copyFlex--text'>Este es tu número de pedido.</p>
@@ -19,7 +19,7 @@ const IdCopy = ({ id }) => {
             </section>
             <p className='idCopy__advice'>¡Copialo y guardalo en un lugar seguro!</p>
             <Link to="/ordersearch/" className="id__link">Consultá tu pedido aquí</Link>
-        </div>
+        </article>
     );
 };
 export default IdCopy;
