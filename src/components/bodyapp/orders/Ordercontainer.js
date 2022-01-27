@@ -27,7 +27,6 @@ const OrderContainer = () => {
         })
         order.catch(
             (err) => {
-                console.log(err)
                 setError(true)
             }
         )

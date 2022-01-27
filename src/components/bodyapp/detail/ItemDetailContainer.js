@@ -17,7 +17,6 @@ const ItemDetailContainer = () => {
             setDetail(producto)
             setloading(false)
         })
-            .catch((err) => console.error(err))
     }, [id]);
     return (loading ? <Loading /> : <ItemDetail {...detail} product={detail} />
     )
