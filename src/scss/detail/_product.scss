@@ -1,8 +1,35 @@
 .detailContainer {
-  margin: 5%;
+  margin: 2%;
   display: flex;
   align-items: center;
+  min-height: 80vh;
   .detailContainer__img {
     max-width: 50%;
+  }
+  .detailContainer__details {
+    padding: 2%;
+    .detailContainer--text {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 2549px) {
+  .detailContainer {
+    .detailContainer__details {
+      .detailContainer--text {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+@media (min-width: 2550px) and (max-width: 100000px) {
+  .detailContainer {
+    .detailContainer__details {
+      .detailContainer--text {
+        font-size: 2.2rem;
+      }
+    }
   }
 }

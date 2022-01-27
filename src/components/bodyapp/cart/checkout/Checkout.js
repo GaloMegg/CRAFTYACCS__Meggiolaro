@@ -13,7 +13,7 @@ const Checkout = ({ state, pushOrder, totalPrice }) => {
                     <div key={e.id} className="checkOut__table">
                         <p>{e.title}</p>
                         <p>{e.quantity}</p>
-                        <p>{e.price}</p>
+                        <p>$ {e.price}</p>
                     </div>)
             })}
             <CheckoutFormContainer confirmOrder={confirmOrder} />

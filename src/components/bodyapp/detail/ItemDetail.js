@@ -22,9 +22,9 @@ const ItemDetail = ({ image, title, description, price, product, id }) => {
             <img src={image} alt="" className="detailContainer__img" />
             <div className="detailContainer__details">
                 {/* <p>{quantity}</p> */}
-                <p className="">{title}</p>
-                <p className="">{description}</p>
-                <p className="">{price}</p>
+                <p className="detailContainer--text">{title}:</p>
+                <p className="detailContainer--text">{description}</p>
+                <p className="detailContainer--text">$ {price}</p>
                 <ItemCount stock={10} initial={1} onAdd={ListernerOfQuantity} />
             </div>
         </div>

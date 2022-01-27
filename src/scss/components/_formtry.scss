@@ -11,3 +11,19 @@
   width: 90%;
   text-align: center;
 }
+
+@media (min-width: 713px) and (max-width: 1300px) {
+  .form__try {
+    width: 60%;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1800px) {
+  .form__try {
+    width: 60%;
+  }
+}
+@media (min-width: 1801px) and (max-width: 100000px) {
+  .form__try {
+    width: 60%;
+  }
+}

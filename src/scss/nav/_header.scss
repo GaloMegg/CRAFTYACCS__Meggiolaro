@@ -1,14 +1,26 @@
 @use "../variables" as v;
 
-.header {
-  font-size: 1.2rem;
-  font-family: "Oswald", sans-serif;
-}
+
 .links {
   color: v.$darkerBlack;
   font-family: "Oswald", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   &:hover {
     color: white;
+  }
+}
+
+@media (min-width: 713px) and (max-width: 1300px) {
+}
+@media (min-width: 1301px) and (max-width: 1800px) {
+
+  .links {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1801px) and (max-width: 100000px) {
+
+  .links {
+    font-size: 1.6rem;
   }
 }

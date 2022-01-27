@@ -11,16 +11,22 @@
   .order__text {
     color: v.$white;
   }
-  .order__buttonCheck {
-    @include btn;
-  }
-  .order__inputCheck {
-    border-radius: 16px;
-    height: 6vh;
+  .order__flex--form {
     width: 90%;
-    text-align: center;
-    font-size: 1rem;
-    font-family: v.$fontFamily;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .order__buttonCheck {
+      @include btn;
+    }
+    .order__inputCheck {
+      border-radius: 16px;
+      height: 6vh;
+      width: 90%;
+      text-align: center;
+      font-size: 1rem;
+      font-family: v.$fontFamily;
+    }
   }
   .order__flex-loading {
     height: 20vh;
@@ -29,6 +35,17 @@
     align-items: center;
     .loadingFrame--try {
       width: 10%;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000000px) {
+  .order__flex {
+    .order__flex--form {
+      width: 60%;
+      .order__inputCheck {
+        width: 80%;
+      }
     }
   }
 }

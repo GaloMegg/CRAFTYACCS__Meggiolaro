@@ -18,3 +18,14 @@
     }
   }
 }
+
+@media (min-width: 713px) and (max-width: 100000px) {
+  .contactForm {
+    .contactForm__try-button-flex {
+      .contactForm__try-button {
+        @include btn(20%);
+      }
+    }
+  }
+}
+

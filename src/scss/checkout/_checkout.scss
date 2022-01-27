@@ -29,3 +29,11 @@
     }
   }
 }
+
+@media (min-width: 713px) and (max-width: 100000px) {
+  .checkoutOrderFlex {
+    .checkOut__table {
+      width: 50%;
+    }
+  }
+}

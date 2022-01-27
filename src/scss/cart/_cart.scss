@@ -11,14 +11,13 @@
   align-items: center;
   .cart__title {
     color: v.$white;
-    font-family: v.$fontFamily;
   }
   .cart__buttons-flex {
     display: flex;
     width: 90%;
     justify-content: center;
     .cart__buttons-try {
-      @include btn;
+      @include btn(40%, v.$darkPink);
       button {
         border: none;
       }
