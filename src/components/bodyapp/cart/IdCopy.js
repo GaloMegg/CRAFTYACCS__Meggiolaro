@@ -17,7 +17,7 @@ const IdCopy = ({ id }) => {
                     <img src={Copy} alt="" className='idCopy__copy--img' />
                 </div>
             </section>
-            <p className=''>¡Copialo y guardalo en un lugar seguro!</p>
+            <p className='idCopy__advice'>¡Copialo y guardalo en un lugar seguro!</p>
             <Link to="/ordersearch/" className="id__link">Consultá tu pedido aquí</Link>
         </div>
     );

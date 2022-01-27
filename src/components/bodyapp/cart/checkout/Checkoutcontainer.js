@@ -18,6 +18,7 @@ const Checkoutcontainer = () => {
             EmptyCart()
         })
     }
+
     if (id === "" && contextVariables.totalPrice === 0) {
         return (<Navigate to="/" />)
     }
