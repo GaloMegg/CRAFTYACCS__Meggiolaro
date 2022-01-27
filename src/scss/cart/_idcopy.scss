@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@import "../mixin.scss";
 .idCopy {
   min-height: 80vh;
   display: flex;
@@ -7,12 +8,19 @@
   align-items: center;
   text-align: center;
   font-family: v.$fontFamily;
+  .id__link {
+    @include links;
+  }
   .idCopy__advice {
     font-size: 1rem;
     padding: 2%;
   }
   .idCopy__numberFlex {
     text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .idCopy__copyFlex {
       background-color: v.$darkPink;
       margin: 2%;
@@ -20,14 +28,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      .idCopy__copy--button {
-        width: 8%;
-        margin: 2%;
-        background-color: v.$darkPink;
-        border: none;
-      }
+      height: 6vh;
+      border-radius: 16px;
+      width: 60%;
       .idCopy__copy--img {
-        width: 100%;
+        height: 100%;
+        margin: 1.5%;
       }
     }
   }

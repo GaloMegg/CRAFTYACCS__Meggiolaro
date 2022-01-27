@@ -8,7 +8,7 @@ const EmptyCart = () => {
             <div className="cart__buttons-flex">
                 <Link to={`/${product.route}/`} className={`cart__buttons-try ${product.linkClass}`} >Productos</Link>
             </div>
-            <Link to="/ordersearch/" className="cart__links">Consulta tu pedido</Link>
+            <Link to="/ordersearch/" className="cart__links">Consultá tu pedido aquí</Link>
         </section >
     )
 }

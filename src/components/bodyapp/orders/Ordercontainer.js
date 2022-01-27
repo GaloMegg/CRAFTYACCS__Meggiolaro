@@ -8,7 +8,7 @@ const OrderContainer = () => {
     const [orderNum, setOrderNum] = useState(0);
     const [loading, setLoading] = useState(null);
     const [orderStatus, setOrderStatus] = useState(0);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState(" ");
     const CheckOrder = (e) => {
         const value = e.target.value
         setOrderNum(value.trim())
@@ -21,6 +21,7 @@ const OrderContainer = () => {
         order.then((res) => {
             const ord = res.data()
             setOrderStatus(ord)
+            ord ? setError(true) : setError(false);
             setLoading(false)
         })
         order.catch(
@@ -32,13 +33,13 @@ const OrderContainer = () => {
     }
     return (
         <div className='order__flex'>
-            <p className='order__text'>Busca tu orden </p>
-            <p className='order__text'>Ingresa tu numero de orden aqui </p>
+            <p className='order__text'>Busca tu orden</p>
+            <p className='order__text'>Ingresa tu numero de orden aquí</p>
             <input type="text" required onChange={CheckOrder} className='order__inputCheck' />
-            <button onClick={orderStatusReq} className='order__buttonCheck'>Check</button>
+            <button onClick={orderStatusReq} className='order__buttonCheck'>Buscar</button>
             {loading && <Loading lessWidth={true} />}
             {orderStatus && <RenderOrder totalPrice={orderStatus["1"]} products={orderStatus["0"]} client={orderStatus["2"]} />}
-            {error || <p className='order__text'>No existe el numero, intente nuevamente.</p>}
+            {error || <p className='order__text'>No existe una orden con ese número, intente nuevamente.</p>}
         </div>
     );
 };

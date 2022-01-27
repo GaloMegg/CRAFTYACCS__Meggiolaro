@@ -13,7 +13,7 @@ const Item = ({ image, title, price, idb, cartQ, renderLink, idDelete }) => {
             <p>$ {price}</p>
             {cartQ && <p>Cantidad:{cartQ}</p>}
             {idDelete && <button className="buttonCart" onClick={HandlerDelete}>Borrar</button>}
-            {renderLink && <Link to={`/prod/product/${idb}`} className="product__card--btn-more">Ver Mas</Link>}
+            {renderLink && <Link to={`/prod/product/${idb}`} className="product__card--btn-more">Ver más</Link>}
         </div >
     )
 }
