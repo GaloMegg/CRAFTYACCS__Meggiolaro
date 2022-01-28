@@ -9,8 +9,8 @@ import { Navigate } from "react-router-dom";
 const Checkoutcontainer = () => {
     const { contextVariables, EmptyCart } = useContext(firstcontext)
     const [id, setId] = useState("");
-    const pushOrder = (e) => {
-        const doctoAdd = { ...e }
+    const pushOrder = (elements) => {
+        const doctoAdd = { ...elements }
         const collect = collection(dataBase, "orders")
         const docAdded = addDoc(collect, doctoAdd)
         docAdded.then((res) => {

@@ -10,8 +10,8 @@ const OrderContainer = () => {
     const [orderStatus, setOrderStatus] = useState(0);
     const [error, setError] = useState(" ");
     const CheckOrder = (e) => {
-            const value = e.target.value
-            setOrderNum(value.trim())
+        const value = e.target.value
+        setOrderNum(value.trim())
     }
     const orderStatusReq = (e) => {
         e.preventDefault()

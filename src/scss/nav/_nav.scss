@@ -5,5 +5,33 @@
   display: flex;
   justify-content: space-evenly;
   min-width: 60%;
-  
+}
+.header_flex {
+  display: flex;
+  align-items: center;
+}
+.links {
+  text-align: center;
+  color: v.$darkerBlack;
+  font-family: "Oswald", sans-serif;
+  font-size: 0.8rem;
+  &:hover {
+    color: white;
+  }
+}
+
+@media (min-width: 713px) and (max-width: 1300px) {
+  .links {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1800px) {
+  .links {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1801px) and (max-width: 100000px) {
+  .links {
+    font-size: 2rem;
+  }
 }

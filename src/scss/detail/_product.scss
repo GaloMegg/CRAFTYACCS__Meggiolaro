@@ -1,8 +1,7 @@
 .detailContainer {
-  margin: 2%;
+  margin: 0.5%;
   display: flex;
-  align-items: center;
-  min-height: 80vh;
+  align-items: flex-start;
   .detailContainer__img {
     max-width: 50%;
   }

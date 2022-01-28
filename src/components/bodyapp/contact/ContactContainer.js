@@ -1,6 +1,9 @@
-import { useReducer } from "react"
+import { useReducer, useState } from "react"
 import validator from 'validator';
 import Contact from "./Contact"
+import { dataBase } from "../../../firebase/Firebase"
+import { addDoc, collection } from "firebase/firestore"
+import { toast } from "react-toastify";
 const ContactContainer = () => {
     const [state, dispatch] = useReducer(Reducer, {
         "userName": true,
@@ -9,6 +12,13 @@ const ContactContainer = () => {
         "userEmail": true,
         "buttonAllowed": false
     })
+    const [contact, setContact] = useState({
+        userName: "",
+        surname: "",
+        phone: "",
+        email: ""
+
+    });
     function Reducer(state, action) {
         switch (action) {
             case "userNameOk":
@@ -45,6 +55,10 @@ const ContactContainer = () => {
         }
         else {
             dispatch("userNameOk");
+            setContact({
+                ...contact,
+                [e.target.name]: e.target.value
+            })
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
     }
@@ -56,6 +70,10 @@ const ContactContainer = () => {
         }
         else {
             dispatch("userSurnameOk")
+            setContact({
+                ...contact,
+                [e.target.name]: e.target.value
+            })
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
     }
@@ -67,6 +85,10 @@ const ContactContainer = () => {
         }
         else {
             dispatch("userPhoneOk")
+            setContact({
+                ...contact,
+                [e.target.name]: e.target.value
+            })
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
     }
@@ -78,11 +100,24 @@ const ContactContainer = () => {
         }
         else {
             dispatch("userEmailOk")
+            setContact({
+                ...contact,
+                [e.target.name]: e.target.value
+            })
             if (state.userName && state.userSurname && state.userPhone && state.userEmail) { dispatch("buttonAllowed") }
         }
     }
+    function PushContact(e) {
+        toast.success("Nos pondremos en contacto")
+        e.preventDefault()
+        const doctoAdd = { ...contact }
+        const collect = collection(dataBase, "contact")
+        const docAdded = addDoc(collect, doctoAdd)
+        docAdded.then((res) => {
+        })
+    }
     return (
-        <Contact ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail} {...state} />
+        <Contact PushContact={PushContact} ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail} {...state} />
     )
 }
 export default ContactContainer

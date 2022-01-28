@@ -1,11 +1,10 @@
-import landingA from "./images/craftylandinga.jpg"
-import landingB from "./images/craftylandingb.jpg"
+import landing from "./images/craftylanding.jpg"
 const Landing = () => {
     return (
-        <section className="landingFlex">
-            <img src={landingA} className="landingA" alt="" />
-            <img src={landingB} className="landingB" alt="" />
-        </section>
+            <section className="landingFlex">
+                <img src={landing} className="landingA" alt="" />
+                <img src={landing} className="landingAb" alt="" />
+            </section>
     )
 }
 export default Landing

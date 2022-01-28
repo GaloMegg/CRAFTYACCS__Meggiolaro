@@ -1,7 +1,7 @@
 @use "../variables" as v;
 
 .footer__footerFlex {
-  height: 25vh;
+  min-height: 25vh;
   max-width: 100%;
   display: flex;
   justify-content: space-around;
@@ -10,7 +10,6 @@
   animation: footerGradient 7s ease infinite;
   .footer__socialMediaFlex,
   .footer__linksFlex {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

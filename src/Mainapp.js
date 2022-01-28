@@ -11,8 +11,8 @@ function MainApp() {
     return (
         <main className="mainDisplay">
             <div className="flexNav">
-                <header>
-                    <Link to="/" className="header links">Crafty Accesorios</Link>
+                <header className="header_flex">
+                    <Link to="/" className="links">Crafty Accesorios</Link>
                 </header>
                 <Nav />
             </div>
