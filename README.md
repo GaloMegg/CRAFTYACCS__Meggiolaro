@@ -1,7 +1,7 @@
 <details>
 <summary>
 
-## Proyecto 🖥️  [![Netlify Status](https://api.netlify.com/api/v1/badges/9c753b97-e75f-4330-bf05-1b5513000436/deploy-status)](https://app.netlify.com/sites/craftyaccs/deploys)
+## Proyecto 🖥️ [![Netlify Status](https://api.netlify.com/api/v1/badges/9c753b97-e75f-4330-bf05-1b5513000436/deploy-status)](https://craftyaccs.netlify.app/)
 
 </summary>
 
