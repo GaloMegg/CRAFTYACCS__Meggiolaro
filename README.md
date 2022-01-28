@@ -1,7 +1,7 @@
 <details>
 <summary>
 
-## Proyecto 🖥️
+## Proyecto 🖥️  [![Netlify Status](https://api.netlify.com/api/v1/badges/9c753b97-e75f-4330-bf05-1b5513000436/deploy-status)](https://app.netlify.com/sites/craftyaccs/deploys)
 
 </summary>
 
@@ -45,6 +45,7 @@ Se abrirá un LocalHost en su navegador predeterminado.
 ¡Y estás listo! 🚀
 
 ⭕ Flow de la compra [YouTube](https://youtu.be/a7xDqxFMbYg)
+
 #### Crafty Accesorios
 
 [@CraftyAccs](https://www.instagram.com/craftyaccs/)
@@ -84,8 +85,7 @@ Se abrirá un LocalHost en su navegador predeterminado.
 
 #### CODERHOUSE
 
-> _Democratizando la educación_
-> [CODERHOUSE](https://www.coderhouse.com/)
+> _Democratizando la educación_ > [CODERHOUSE](https://www.coderhouse.com/)
 
 </p>
 
