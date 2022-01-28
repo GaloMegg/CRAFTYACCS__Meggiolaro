@@ -1,9 +1,11 @@
 .detailContainer {
   margin: 0.5%;
+
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   .detailContainer__img {
     max-width: 50%;
+    border-radius: 16px;
   }
   .detailContainer__details {
     padding: 2%;

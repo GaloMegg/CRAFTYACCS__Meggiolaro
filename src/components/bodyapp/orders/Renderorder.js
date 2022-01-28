@@ -7,15 +7,15 @@ const RenderOrder = ({ totalPrice, products, client }) => {
             {products && <OrderItem products={products} />}
             {client && <div className="orderStatus__client">
                 <p className="orderStatus__client--text">
-                    Nombre:{client.userName}
+                    Nombre: {client.userName}
                 </p>
                 <p className="orderStatus__client--text">
-                    Apellido:{client.surname}
+                    Apellido: {client.surname}
                 </p>
                 <p className="orderStatus__client--text">
-                    Codigo Postal:{client.zip}
+                    Codigo Postal: {client.zip}
                 </p> <p className="orderStatus__client--text">
-                    Direccion de envio:{client.address}
+                    Direccion de envio: {client.address}
                 </p>
             </div>
             }
