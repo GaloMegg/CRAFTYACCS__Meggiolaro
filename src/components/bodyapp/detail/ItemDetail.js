@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { firstcontext } from "../../context/Context"
 import ItemCount from "./ItemCount"
 import { toast } from 'react-toastify';
-const ItemDetail = ({ image, title, description, price, product, id }) => {
+const ItemDetail = ({ image, title, description, price, product }) => {
     const { AddQuantity, PushCart, TotalPricing } = useContext(firstcontext)
     const ListernerOfQuantity = (counter) => {
         AddQuantity(counter)
@@ -25,7 +25,7 @@ const ItemDetail = ({ image, title, description, price, product, id }) => {
                 <p className="detailContainer--text">{title}:</p>
                 <p className="detailContainer--text">{description}</p>
                 <p className="detailContainer--text">$ {price}</p>
-                <ItemCount stock={10} initial={1} onAdd={ListernerOfQuantity} />
+                <ItemCount initial={1} onAdd={ListernerOfQuantity} />
             </div>
         </div>
     )
