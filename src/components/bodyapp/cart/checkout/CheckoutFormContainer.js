@@ -1,5 +1,4 @@
 import { useReducer, useState } from "react";
-import CheckoutForm from "./CheckoutForm";
 import validator from 'validator';
 
 const CheckoutFormContainer = ({ confirmOrder }) => {
@@ -169,7 +168,13 @@ const CheckoutFormContainer = ({ confirmOrder }) => {
     }
     return (
         <form className="checkoutForm--flex checkoutForm" onSubmit={ConfirmData}>
-            <CheckoutForm ValidationName={ValidationName} ValidationSurname={ValidationSurname} ValidationPhone={ValidationPhone} ValidationEmail={ValidationEmail} ValidationZip={ValidationZip} ValidationDni={ValidationDni} ValidationAddress={ValidationAddress} ConfirmData={ConfirmData} {...state} />
+            <input type="text" name="userName" placeholder="Nombre" className={state.userName ? "form__try" : "notValid"} required onChange={ValidationName} onBlur={ValidationName} />
+            <input type="text" name="surname" placeholder="Apellido" className={state.userSurname ? "form__try" : "notValid"} required onChange={ValidationSurname} onBlur={ValidationSurname} />
+            <input type="text" name="phone" placeholder="Telefono" className={state.userPhone ? "form__try" : "notValid"} required onChange={ValidationPhone} onBlur={ValidationPhone} />
+            <input type="text" name="zip" placeholder="Codigo Postal" className={state.userZip ? "form__try" : "notValid"} required onChange={ValidationZip} onBlur={ValidationZip} />
+            <input type="text" name="dni" placeholder="DNI" className={state.userDNI ? "form__try" : "notValid"} required onChange={ValidationDni} onBlur={ValidationDni} />
+            <input type="text" name="address" placeholder="Direccion" className={state.userAddress ? "form__try" : "notValid"} required onChange={ValidationAddress} onBlur={ValidationAddress} />
+            <input type="email" name="email" placeholder="Email" className={state.userEmail ? "form__try" : "notValid"} required onChange={ValidationEmail} onBlur={ValidationEmail} />
             <button className="btn" disabled={!state.buttonAllowed && true}>Confirmar</button>
         </form>
     );

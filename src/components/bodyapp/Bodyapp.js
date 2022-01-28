@@ -7,7 +7,7 @@ import Landing from "./landing/Landing"
 import WhoWeAre from "./whoweare/WhoWeAre"
 import OrderContainer from "./orders/OrderContainer"
 import Checkoutcontainer from "./cart/checkout/CheckoutContainer"
-
+import { memo } from "react"
 const BodyApp = () => {
     return (
         <Routes>
@@ -24,4 +24,4 @@ const BodyApp = () => {
     )
 }
 
-export default BodyApp
+export default memo(BodyApp)
