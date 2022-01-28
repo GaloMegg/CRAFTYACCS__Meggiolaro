@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9c753b97-e75f-4330-bf05-1b5513000436/deploy-status)](https://craftyaccs.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/23173cbf-9b8b-4a6d-9413-733dc5d1abf8/deploy-status)](https://craftyaccs.netlify.app/)
 
 <details>
 <summary>
