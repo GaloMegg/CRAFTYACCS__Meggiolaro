@@ -44,7 +44,7 @@ Se abrirá un LocalHost en su navegador predeterminado.
 
 ¡Y estás listo! 🚀
 
-Flow de la compra [YouTube](https://youtu.be/a7xDqxFMbYg)
+⭕ Flow de la compra [YouTube](https://youtu.be/a7xDqxFMbYg)
 #### Crafty Accesorios
 
 [@CraftyAccs](https://www.instagram.com/craftyaccs/)
