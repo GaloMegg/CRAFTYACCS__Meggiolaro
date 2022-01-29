@@ -3,7 +3,7 @@ import { firstcontext } from "../../../context/Context";
 import Checkout from "./Checkout";
 import { dataBase } from "../../../../firebase/Firebase"
 import { addDoc, collection } from "firebase/firestore";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import IdCopy from "../IdCopy";
 import { Navigate } from "react-router-dom";
 const Checkoutcontainer = () => {
