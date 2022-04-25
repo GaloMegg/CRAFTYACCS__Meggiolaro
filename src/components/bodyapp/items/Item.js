@@ -1,11 +1,13 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { firstcontext } from "../../context/Context"
+
 const Item = ({ image, title, price, idb, cartQ, renderLink, idDelete }) => {
     const { DeleteItem } = useContext(firstcontext)
     function HandlerDelete() {
         DeleteItem(idDelete)
     }
+    
     return (
         <div className="product__card">
             <img src={image} alt="" className="product__card--img" />
